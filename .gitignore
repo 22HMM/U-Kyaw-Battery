@@ -1,0 +1,12 @@
+# Node modules
+node_modules/
+
+# Laravel Mix
+mix-manifest.json
+
+# Composer dependencies
+/composer.lock
+
+# NPM / Yarn lock files
+package-lock.json
+yarn.lock
