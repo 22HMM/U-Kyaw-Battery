@@ -40,7 +40,7 @@
                     height="80"
                     loading="eager"
                     title="U Kyaw Battery Sales & Services"
-                    class="w-auto h-[40px] md:h-[50px] lg:h-[60px] xl:h-[80px]" />
+                    class="w-auto h-[40px] xs:h-[45px] md:h-[50px] lg:h-[60px] xl:h-[80px]" />
                 <h1 class="sr-only"><?= env('APP_NAME'); ?></h1>
             </a>
 
