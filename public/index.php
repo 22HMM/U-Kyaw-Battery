@@ -20,9 +20,9 @@
 
 session_start();
 
-// Set session lang from cookie if not already set
-if (!isset($_SESSION['lang']) && isset($_COOKIE['lang'])) {
-    $_SESSION['lang'] = $_COOKIE['lang'];
+// Set session lang from cookie if not already set, fallback to 'en'
+if (!isset($_SESSION['lang'])) {
+    $_SESSION['lang'] = $_COOKIE['lang'] ?? 'en';
 }
 
 // Load environment variables from .env file
