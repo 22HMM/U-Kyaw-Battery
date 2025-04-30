@@ -14,6 +14,10 @@
  * @author KhantLoonThu
  * 
  * @version 1.0.0 
+ * 
+ * * NOTE: If the project needs to be converted to a WordPress-based CMS in the future:
+ *   - Replace the custom routing system with WordPress's built-in routing.
+ *   - Replace manual loading of environment variables with WordPress's native configuration system.
  */
 
 # Start the session (needed for storing user data across requests)
