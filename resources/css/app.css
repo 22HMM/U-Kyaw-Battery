@@ -14,17 +14,25 @@
 
 @font-face {
   font-family: "Noto Sans Myanmar";
-  src: url("/fonts/NotoSansMyanmar.ttf") format("truetype");
+  src: url("/fonts/NotoSansMyanmar-Regular.ttf") format("truetype");
 }
 
 /* Components */
 @layer components {
   .theme-container {
-    @apply w-full px-4 mx-auto max-w-screen-2xl sm:px-6 lg:px-16 2xl:px-0;
+    @apply w-full px-4 mx-auto max-w-screen-2xl sm:px-6 lg:px-16 2xl:px-2;
+  }
+
+  .nav-link {
+    @apply focus:outline-none focus:text-[#0C40C5] hover:text-[#0C40C5] transition-colors duration-300 ease-linear hover:bg-[#2D34951A] hover:border-b-theme focus:border-b-theme border-b-[3px] border-b-transparent lg:px-4 xl:px-6 px-2 py-6;
+  }
+
+  .nav-link-sm {
+    @apply focus:outline-none focus:text-[#0C40C5] hover:text-[#0C40C5] transition-colors duration-300 ease-linear hover:bg-[#2D34951A] hover:border-b-theme focus:border-b-theme border-b-[3px] border-b-transparent p-2;
   }
 
   .footer-title {
-    @apply text-sm xs:text-base md:text-xl font-myanmar-sangam-mn font-semibold text-theme leading-[150%] tracking-[0px] select-none;
+    @apply text-sm xs:text-base md:text-xl lg:text-2xl font-noto-sans-myanmar font-medium text-theme leading-[150%] tracking-[0px];
   }
 
   .footer-sub-title {

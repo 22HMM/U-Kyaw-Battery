@@ -22,7 +22,7 @@ module.exports = {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
         "ibm-plex-sans": ['IBM Plex Sans', 'sans-serif'],
-        "myanmar-sangam-mn": ['Noto Sans Myanmar', 'Inter', 'sans-serif'],
+        "noto-sans-myanmar": ['Noto Sans Myanmar', 'Inter', 'sans-serif'],
       },
     },
   },
