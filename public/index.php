@@ -3,72 +3,73 @@
 /**
  * Main entry point for the application.
  * 
- * This script initializes the routing system using the Bramus Router library, handles routing 
- * for different pages (Home, Products, Services, About Us, Contact Us), and provides a custom 
- * 404 error page. It also loads environment variables from a .env file for configuration purposes.
+ * Sets up routing with Bramus Router, loads environment configs, handles session language settings,
+ * and serves dynamic page routes like Home, Products, etc.
  * 
- * The script starts a session to enable persistent user data across requests.
- * 
- * @package Bramus Router
- * @package PHPMailer
- * @author KhantLoonThu
- * 
- * @version 1.0.0 
- * 
- * * NOTE: If the project needs to be converted to a WordPress-based CMS in the future:
+ * * * NOTE: If the project needs to be converted to a WordPress-based CMS in the future:
  *   - Replace the custom routing system with WordPress's built-in routing.
  *   - Replace manual loading of environment variables with WordPress's native configuration system.
+ * 
+ * @author KhantLoonThu
+ * @version 1.0.0
  */
 
-# Start the session (needed for storing user data across requests)
+// ------------------------
+// Bootstrap & Setup
+// ------------------------ 
+
 session_start();
 
-# Load environment variables from the .env file
-require_once __DIR__ . '/../loadEnv.php';
+// Set session lang from cookie if not already set
+if (!isset($_SESSION['lang']) && isset($_COOKIE['lang'])) {
+    $_SESSION['lang'] = $_COOKIE['lang'];
+}
 
-# Use the loadEnv function to load variables into the environment
-loadEnv(__DIR__ . '/../.env');
+// Load environment variables from .env file
+require_once __DIR__ . '/../loadEnv.php';
+loadEnv(__DIR__ . '/../.env'); // Enables use of env('KEY')
 
 # Now you can use env('KEY') to access .env variables — just like in Laravel :)
 
-# Load the autoloader for third-party libraries
+// Load core helpers and dependencies
+require_once __DIR__ . '/functions.php';
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use Bramus\Router\Router;
 
+// ------------------------
+// Router Setup
+// ------------------------
+
 # Initialize the router
 $router = new Router();
 
-# Define route for Home page
-$router->get('/', function () {
-    include_once __DIR__ . '/home.php';
+// Pages
+$router->get('/', fn() => include_once __DIR__ . '/home.php');
+$router->get('/products', fn() => include_once __DIR__ . '/products.php');
+$router->get('/services', fn() => include_once __DIR__ . '/services.php');
+$router->get('/about-us', fn() => include_once __DIR__ . '/about-us.php');
+$router->get('/contact-us', fn() => include_once __DIR__ . '/contact-us.php');
+
+// Language switcher
+$router->post('/change-language', function () {
+    $lang = $_POST['lang'] ?? 'en';
+    if (in_array($lang, ['en', 'mm'])) {
+        $_SESSION['lang'] = $lang;
+        setcookie('lang', $lang, time() + (86400 * 3), "/"); // Valid for 3 days
+    }
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
+    exit;
 });
 
-# Define route for Products page
-$router->get('/products', function () {
-    include_once __DIR__ . '/products.php';
-});
-
-# Define route for Services page
-$router->get('/services', function () {
-    include_once __DIR__ . '/services.php';
-});
-
-# Define route for About Us page
-$router->get('/about-us', function () {
-    include_once __DIR__ . '/about-us.php';
-});
-
-# Define route for Contact Us page
-$router->get('/contact-us', function () {
-    include_once __DIR__ . '/contact-us.php';
-});
-
-# Define a custom 404 error page route
+// 404 fallback
 $router->set404(function () {
     http_response_code(404);
     include_once __DIR__ . '/404.php';
 });
 
-# Run the router to handle the incoming request
+// ------------------------
+// Run Application
+// ------------------------
+
 $router->run();

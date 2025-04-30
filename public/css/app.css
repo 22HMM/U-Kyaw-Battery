@@ -1643,6 +1643,7 @@ input:checked + .toggle-bg {
   }
 }
 .nav-link {
+  white-space: nowrap;
   border-bottom-width: 3px;
   border-bottom-color: transparent;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
@@ -2132,6 +2133,9 @@ input:checked + .toggle-bg {
   border-top-color: rgb(2 11 34 / var(--tw-border-opacity, 1));
   border-bottom-color: rgb(2 11 34 / var(--tw-border-opacity, 1));
 }
+.border-b-transparent {
+  border-bottom-color: transparent;
+}
 .bg-\[\#FFFCFF\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 252 255 / var(--tw-bg-opacity, 1));
@@ -2192,10 +2196,6 @@ input:checked + .toggle-bg {
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-}
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 .py-10 {
   padding-top: 2.5rem;
@@ -2448,28 +2448,28 @@ html {
 
 html *::-moz-selection {
   --tw-bg-opacity: 1;
-  background-color: rgb(54 63 179 / var(--tw-bg-opacity, 1));
+  background-color: rgb(208 4 22 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 html *::selection {
   --tw-bg-opacity: 1;
-  background-color: rgb(54 63 179 / var(--tw-bg-opacity, 1));
+  background-color: rgb(208 4 22 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 html::-moz-selection {
   --tw-bg-opacity: 1;
-  background-color: rgb(54 63 179 / var(--tw-bg-opacity, 1));
+  background-color: rgb(208 4 22 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 html::selection {
   --tw-bg-opacity: 1;
-  background-color: rgb(54 63 179 / var(--tw-bg-opacity, 1));
+  background-color: rgb(208 4 22 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
@@ -2483,24 +2483,24 @@ h6 {
   font-family: IBM Plex Sans, sans-serif;
 }
 
-.selection\:bg-theme *::-moz-selection {
+.selection\:bg-secondary *::-moz-selection {
   --tw-bg-opacity: 1;
-  background-color: rgb(54 63 179 / var(--tw-bg-opacity, 1));
+  background-color: rgb(208 4 22 / var(--tw-bg-opacity, 1));
 }
 
-.selection\:bg-theme *::selection {
+.selection\:bg-secondary *::selection {
   --tw-bg-opacity: 1;
-  background-color: rgb(54 63 179 / var(--tw-bg-opacity, 1));
+  background-color: rgb(208 4 22 / var(--tw-bg-opacity, 1));
 }
 
-.selection\:bg-theme::-moz-selection {
+.selection\:bg-secondary::-moz-selection {
   --tw-bg-opacity: 1;
-  background-color: rgb(54 63 179 / var(--tw-bg-opacity, 1));
+  background-color: rgb(208 4 22 / var(--tw-bg-opacity, 1));
 }
 
-.selection\:bg-theme::selection {
+.selection\:bg-secondary::selection {
   --tw-bg-opacity: 1;
-  background-color: rgb(54 63 179 / var(--tw-bg-opacity, 1));
+  background-color: rgb(208 4 22 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:border-gray-300:hover {
@@ -2745,6 +2745,10 @@ h6 {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
+
+  .md\:text-\[12px\] {
+    font-size: 12px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -2786,26 +2790,44 @@ h6 {
     padding-right: 4rem;
   }
 
+  .lg\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .lg\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
   .lg\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-
-  .lg\:px-5 {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
   }
 
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
   }
+
+  .lg\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 }
 
 @media (min-width: 1280px) {
 
+  .xl\:h-\[36px\] {
+    height: 36px;
+  }
+
   .xl\:h-\[80px\] {
     height: 80px;
+  }
+
+  .xl\:w-\[48px\] {
+    width: 48px;
   }
 
   .xl\:gap-44 {

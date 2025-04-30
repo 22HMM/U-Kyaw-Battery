@@ -5,8 +5,11 @@ node_modules/
 mix-manifest.json
 
 # Composer dependencies
-/composer.lock
+composer.lock
 
 # NPM / Yarn lock files
 package-lock.json
 yarn.lock
+
+# Environment variables
+.env

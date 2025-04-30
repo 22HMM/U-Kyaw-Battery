@@ -62,24 +62,35 @@
 
 
             <!-- Nav links for large screens -->
-            <ul class="items-center hidden space-x-3 text-sm font-normal capitalize transition-all duration-300 ease-in-out md:flex lg:space-x-5">
-                <li><a href="/" class="nav-link lg:px-4 xl:px-6 px-2 py-6 <?= ($currentPath == '/') ? 'active' : ''; ?>">home</a></li>
-                <li><a href="/products" class="nav-link lg:px-4 xl:px-6 px-2 py-6 <?= ($currentPath == '/products') ? 'active' : ''; ?>">products</a></li>
-                <li><a href="/services" class="nav-link lg:px-4 xl:px-6 px-2 py-6 <?= ($currentPath == '/services') ? 'active' : ''; ?>">services</a></li>
-                <li><a href="/about-us" class="nav-link lg:px-4 xl:px-6 px-2 py-6 <?= ($currentPath == '/about-us') ? 'active' : ''; ?>">about us</a></li>
-                <li><a href="/contact-us" class="nav-link lg:px-4 xl:px-6 px-2 py-6 <?= ($currentPath == '/contact-us') ? 'active' : ''; ?>">contact us</a></li>
+            <ul class="items-center hidden space-x-3 text-sm md:text-[12px] lg:text-sm font-normal capitalize transition-all duration-300 ease-in-out md:flex lg:space-x-5">
+                <li><a href="/" class="nav-link lg:px-4 xl:px-6 px-2 py-6 <?= ($currentPath == '/') ? 'active' : ''; ?>"><?= __('navbar.home'); ?></a></li>
+                <li><a href="/products" class="nav-link lg:px-2 xl:px-6 px-2 py-6 <?= ($currentPath == '/products') ? 'active' : ''; ?>"><?= __('navbar.products'); ?></a></li>
+                <li><a href="/services" class="nav-link lg:px-2 xl:px-6 px-2 py-6 <?= ($currentPath == '/services') ? 'active' : ''; ?>"><?= __('navbar.services'); ?></a></li>
+                <li><a href="/about-us" class="nav-link lg:px-2 xl:px-6 px-2 py-6 <?= ($currentPath == '/about-us') ? 'active' : ''; ?>"><?= __('navbar.about_us'); ?></a></li>
+                <li><a href="/contact-us" class="nav-link lg:px-2 xl:px-6 px-2 py-6 <?= ($currentPath == '/contact-us') ? 'active' : ''; ?>"><?= __('navbar.contact_us'); ?></a></li>
                 <li>
                     <!-- Dropdown button -->
                     <button id="language-dropdown-button" data-dropdown-toggle="language-dropdown"
-                        class="text-white border border-[#E9E5E9] rounded focus:outline-none px-2 lg:px-5 py-2.5 text-center inline-flex items-center" type="button">
-                        <span class="sr-only">English Language</span>
-                        <img class="w-[30px] h-[20px] lg:w-[48px] lg:h-[36px]"
-                            src="/images/US.png"
-                            alt="US Flag"
-                            width="48"
-                            height="36"
-                            title="US Flag"
-                            loading="eager" />
+                        class="text-white border border-[#E9E5E9] rounded focus:outline-none px-2 lg:px-3 py-2.5 text-center inline-flex items-center" type="button">
+                        <?php if ($_SESSION['lang'] == 'en'): ?>
+                            <span class="sr-only">English Language</span>
+                            <img class="w-[30px] h-[20px] xl:w-[48px] xl:h-[36px]"
+                                src="/images/US.png"
+                                alt="US Flag"
+                                width="48"
+                                height="36"
+                                title="US Flag"
+                                loading="eager" />
+                        <?php elseif ($_SESSION['lang'] == 'mm'): ?>
+                            <span class="sr-only">Burmese Language</span>
+                            <img class="w-[30px] h-[20px] xl:w-[48px] xl:h-[36px]"
+                                src="/images/MM.png"
+                                alt="MM Flag"
+                                width="48"
+                                height="36"
+                                title="MM Flag"
+                                loading="eager" />
+                        <?php endif; ?>
                         <svg class="w-6 h-6 ms-2 lg:ms-5" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <mask id="mask0_284_100" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
                                 <rect width="24" height="24" fill="#D9D9D9" />
@@ -94,28 +105,34 @@
                     <div id="language-dropdown" class="z-10 hidden w-32 bg-transparent">
                         <ul class="space-y-1 text-sm text-gray-700" aria-labelledby="language-dropdown-button">
                             <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">
-                                    <span class="sr-only">English Language</span>
-                                    <img class="w-[30px] h-[20px] lg:w-[48px] lg:h-[36px]"
-                                        src="/images/US.png"
-                                        alt="US Flag"
-                                        width="48"
-                                        height="36"
-                                        title="US Flag"
-                                        loading="eager" />
-                                </a>
+                                <form action="/change-language" method="post" class="w-full">
+                                    <input type="hidden" name="lang" value="en">
+                                    <button type="submit" class="block w-full px-4 py-2 bg-white hover:bg-gray-100">
+                                        <span class="sr-only">English Language</span>
+                                        <img class="w-[30px] h-[20px] lg:w-[48px] lg:h-[36px]"
+                                            src="/images/US.png"
+                                            alt="US Flag"
+                                            width="48"
+                                            height="36"
+                                            title="US Flag"
+                                            loading="eager" />
+                                    </button>
+                                </form>
                             </li>
                             <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">
-                                    <span class="sr-only">Burmese Language</span>
-                                    <img class="w-[30px] h-[20px] lg:w-[48px] lg:h-[36px]"
-                                        src="/images/MM.png"
-                                        alt="MM Flag"
-                                        width="48"
-                                        height="36"
-                                        title="MM Flag"
-                                        loading="eager" />
-                                </a>
+                                <form action="/change-language" method="post" class="w-full">
+                                    <input type="hidden" name="lang" value="mm">
+                                    <button type="submit" class="block w-full px-4 py-2 bg-white hover:bg-gray-100">
+                                        <span class="sr-only">Burmese Language</span>
+                                        <img class="w-[30px] h-[20px] lg:w-[48px] lg:h-[36px]"
+                                            src="/images/MM.png"
+                                            alt="MM Flag"
+                                            width="48"
+                                            height="36"
+                                            title="MM Flag"
+                                            loading="eager" />
+                                    </button>
+                                </form>
                             </li>
                         </ul>
                     </div>
@@ -135,23 +152,38 @@
                 <span class="sr-only">Close menu</span>
             </button>
             <ul class="flex flex-col mt-10 space-y-5 text-sm font-normal capitalize transition-all duration-300 ease-in-out theme-container md:hidden">
-                <li><a href="/" class="nav-link p-2 <?= ($currentPath == '/') ? 'active' : ''; ?>">home</a></li>
-                <li><a href="/products" class="nav-link p-2 <?= ($currentPath == '/products') ? 'active' : ''; ?>">products</a></li>
-                <li><a href="/services" class="nav-link p-2 <?= ($currentPath == '/services') ? 'active' : ''; ?>">services</a></li>
-                <li><a href="/about-us" class="nav-link p-2 <?= ($currentPath == '/about-us') ? 'active' : ''; ?>">about us</a></li>
-                <li><a href="/contact-us" class="nav-link p-2 <?= ($currentPath == '/contact-us') ? 'active' : ''; ?>">contact us</a></li>
+                <li><a href="/" class="nav-link p-2 <?= ($currentPath == '/') ? 'active' : ''; ?>"><?= __('navbar.home'); ?></a></li>
+                <li><a href="/products" class="nav-link p-2 <?= ($currentPath == '/products') ? 'active' : ''; ?>"><?= __('navbar.products'); ?></a></li>
+                <li><a href="/services" class="nav-link p-2 <?= ($currentPath == '/services') ? 'active' : ''; ?>"><?= __('navbar.services'); ?></a></li>
+                <li><a href="/about-us" class="nav-link p-2 <?= ($currentPath == '/about-us') ? 'active' : ''; ?>"><?= __('navbar.about_us'); ?></a></li>
+                <li><a href="/contact-us" class="nav-link p-2 <?= ($currentPath == '/contact-us') ? 'active' : ''; ?>"><?= __('navbar.contact_us'); ?></a></li>
                 <li>
                     <!-- Dropdown button -->
                     <button id="language-dropdown-button-sm" data-dropdown-toggle="language-dropdown-sm"
-                        class="text-white border border-[#E9E5E9] rounded focus:outline-none px-2 lg:px-5 py-2.5 text-center inline-flex items-center w-full justify-between" type="button">
-                        <span class="sr-only">English Language</span>
-                        <img class="w-[30px] h-[20px] lg:w-[48px] lg:h-[36px]"
-                            src="/images/US.png"
-                            alt="US Flag"
-                            width="48"
-                            height="36"
-                            title="US Flag"
-                            loading="eager" />
+                        class="border border-[#E9E5E9] rounded focus:outline-none px-2 lg:px-3 py-2.5 text-center inline-flex items-center w-full justify-between" type="button">
+                        <?php if ($_SESSION['lang'] == 'en'): ?>
+                            <div class="flex items-center gap-2">
+                                <img class="w-[30px] h-[20px] lg:w-[48px] lg:h-[36px]"
+                                    src="/images/US.png"
+                                    alt="US Flag"
+                                    width="48"
+                                    height="36"
+                                    title="US Flag"
+                                    loading="eager" />
+                                <span>English</span>
+                            </div>
+                        <?php elseif ($_SESSION['lang'] == 'mm'): ?>
+                            <div class="flex items-center gap-2">
+                                <img class="w-[30px] h-[20px] lg:w-[48px] lg:h-[36px]"
+                                    src="/images/MM.png"
+                                    alt="MM Flag"
+                                    width="48"
+                                    height="36"
+                                    title="MM Flag"
+                                    loading="eager" />
+                                <span>Burmese</span>
+                            </div>
+                        <?php endif; ?>
                         <svg class="w-6 h-6 ms-2 lg:ms-5" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <mask id="mask0_284_100" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
                                 <rect width="24" height="24" fill="#D9D9D9" />
@@ -166,28 +198,34 @@
                     <div id="language-dropdown-sm" class="z-10 hidden w-full bg-transparent theme-container" role="menu" aria-orientation="vertical" aria-labelledby="language-dropdown-button-sm">
                         <ul class="space-y-1 text-sm text-gray-700" aria-labelledby="language-dropdown-button-sm">
                             <li>
-                                <a href="#" class="block px-6 py-2 bg-white hover:bg-gray-100">
-                                    <span class="sr-only">English Language</span>
-                                    <img class="w-[30px] h-[20px] lg:w-[48px] lg:h-[36px]"
-                                        src="/images/US.png"
-                                        alt="US Flag"
-                                        width="48"
-                                        height="36"
-                                        title="US Flag"
-                                        loading="eager" />
-                                </a>
+                                <form action="/change-language" method="post" class="w-full">
+                                    <input type="hidden" name="lang" value="en">
+                                    <button type="submit" class="flex items-center w-full gap-2 px-4 py-2 bg-white hover:bg-gray-100">
+                                        <img class="w-[30px] h-[20px] lg:w-[48px] lg:h-[36px]"
+                                            src="/images/US.png"
+                                            alt="US Flag"
+                                            width="48"
+                                            height="36"
+                                            title="US Flag"
+                                            loading="eager" />
+                                        <span>English</span>
+                                    </button>
+                                </form>
                             </li>
                             <li>
-                                <a href="#" class="block px-6 py-2 bg-white hover:bg-gray-100">
-                                    <span class="sr-only">Burmese Language</span>
-                                    <img class="w-[30px] h-[20px] lg:w-[48px] lg:h-[36px]"
-                                        src="/images/MM.png"
-                                        alt="MM Flag"
-                                        width="48"
-                                        height="36"
-                                        title="MM Flag"
-                                        loading="eager" />
-                                </a>
+                                <form action="/change-language" method="post" class="w-full">
+                                    <input type="hidden" name="lang" value="mm">
+                                    <button type="submit" class="flex items-center w-full gap-2 px-4 py-2 bg-white hover:bg-gray-100">
+                                        <img class="w-[30px] h-[20px] lg:w-[48px] lg:h-[36px]"
+                                            src="/images/MM.png"
+                                            alt="MM Flag"
+                                            width="48"
+                                            height="36"
+                                            title="MM Flag"
+                                            loading="eager" />
+                                        <span>Burmese</span>
+                                    </button>
+                                </form>
                             </li>
                         </ul>
                     </div>

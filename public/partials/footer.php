@@ -18,15 +18,15 @@
             ?>
             <nav aria-labelledby="footer-links-heading">
                 <h3 id="footer-links-heading" class="mb-6 footer-sub-title">
-                    links
+                    <?= __('footer.links') ?>
                 </h3>
 
                 <ul class="space-y-3 md:space-y-5 text-[#3E3D3D] text-sm md:text-base">
-                    <li class="px-2"><a href="/" class="footer-nav-link">home</a></li>
-                    <li class="px-2"><a href="/products" class="footer-nav-link">products</a></li>
-                    <li class="px-2"><a href="/services" class="footer-nav-link">services</a></li>
-                    <li class="px-2"><a href="/about-us" class="footer-nav-link">about us</a></li>
-                    <li class="px-2"><a href="/contact-us" class="footer-nav-link">contact us</a></li>
+                    <li class="px-2"><a href="/" class="footer-nav-link"><?= __('footer.home') ?></a></li>
+                    <li class="px-2"><a href="/products" class="footer-nav-link"><?= __('footer.products') ?></a></li>
+                    <li class="px-2"><a href="/services" class="footer-nav-link"><?= __('footer.services') ?></a></li>
+                    <li class="px-2"><a href="/about-us" class="footer-nav-link"><?= __('footer.about_us') ?></a></li>
+                    <li class="px-2"><a href="/contact-us" class="footer-nav-link"><?= __('footer.contact_us') ?></a></li>
                 </ul>
             </nav>
 
@@ -34,7 +34,7 @@
             ?>
             <section aria-labelledby="footer-address-heading">
                 <h3 id="footer-address-heading" class="mb-6 footer-sub-title">
-                    contact us
+                    <?= __('footer.contact_us') ?>
                 </h3>
 
                 <address class="not-italic text-[#545254] text-sm md:text-base">
@@ -53,7 +53,7 @@
                         </li>
                         <li class="inline-block">
                             <a href="/contact-us" class="flex items-center gap-3 capitalize focus:outline-none focus:text-theme hover:text-theme group">
-                                <span>message us</span>
+                                <span><?= __('footer.message_us') ?></span>
                                 <svg class="text-[#6E6D6E] w-6 h-6 transition-transform duration-300 ease-linear shrink-0 group-hover:transform group-hover:translate-x-1 group-focus:translate-x-1 group-hover:text-theme group-focus:text-theme"
                                     aria-hidden="true"
                                     focusable="false"
@@ -78,7 +78,7 @@
             ?>
             <section aria-labelledby="footer-social-heading">
                 <h3 id="footer-social-heading" class="mb-6 footer-sub-title">
-                    follow us
+                    <?= __('footer.follow_us') ?>
                 </h3>
 
                 <ul class="flex items-center mb-6 space-x-8 text-sm lg:space-x-16 md:space-x-4 md:text-base">
