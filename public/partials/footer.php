@@ -22,11 +22,11 @@
                 </h3>
 
                 <ul class="space-y-3 md:space-y-5 text-[#3E3D3D] text-sm md:text-base">
-                    <li class="px-2"><a href="javascript:void(0)" class="footer-nav-link">home</a></li>
-                    <li class="px-2"><a href="javascript:void(0)" class="footer-nav-link">products</a></li>
-                    <li class="px-2"><a href="javascript:void(0)" class="footer-nav-link">services</a></li>
-                    <li class="px-2"><a href="javascript:void(0)" class="footer-nav-link">about us</a></li>
-                    <li class="px-2"><a href="javascript:void(0)" class="footer-nav-link">contact us</a></li>
+                    <li class="px-2"><a href="/" class="footer-nav-link">home</a></li>
+                    <li class="px-2"><a href="/products" class="footer-nav-link">products</a></li>
+                    <li class="px-2"><a href="/services" class="footer-nav-link">services</a></li>
+                    <li class="px-2"><a href="/about-us" class="footer-nav-link">about us</a></li>
+                    <li class="px-2"><a href="/contact-us" class="footer-nav-link">contact us</a></li>
                 </ul>
             </nav>
 
@@ -52,7 +52,7 @@
                             <a href="mailto:kyawbattery664@gmail.com" class="focus:outline-none focus:text-theme">kyawbattery664@gmail.com</a>
                         </li>
                         <li class="inline-block">
-                            <a href="javascript:void(0)" class="flex items-center gap-3 capitalize focus:outline-none focus:text-theme hover:text-theme group">
+                            <a href="/contact-us" class="flex items-center gap-3 capitalize focus:outline-none focus:text-theme hover:text-theme group">
                                 <span>message us</span>
                                 <svg class="text-[#6E6D6E] w-6 h-6 transition-transform duration-300 ease-linear shrink-0 group-hover:transform group-hover:translate-x-1 group-focus:translate-x-1 group-hover:text-theme group-focus:text-theme"
                                     aria-hidden="true"
