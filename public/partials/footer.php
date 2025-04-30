@@ -12,7 +12,7 @@
             <h2 class="footer-title">ဦးကျော် ဘတ္ထရီ - Kyaw Battery Sales & Services</h2>
         </header>
 
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 md:gap-12">
+        <div class="grid gap-6 md:grid-cols-3 md:gap-12" role="contentinfo" aria-label="Footer Information">
 
             <?php // Quick Links Navigation            
             ?>
@@ -81,7 +81,7 @@
                     follow us
                 </h3>
 
-                <ul class="flex items-center mb-6 space-x-8 text-sm md:space-x-16 md:text-base">
+                <ul class="flex items-center mb-6 space-x-8 text-sm lg:space-x-16 md:space-x-4 md:text-base">
                     <li><a href="https://www.facebook.com" target="_blank" rel="noopener" class="capitalize text-facebook focus:outline-none focus:underline hover:underline underline-offset-2">facebook</a></li>
                     <li><a href="https://www.linkedin.com" target="_blank" rel="noopener" class="capitalize text-linkedin focus:outline-none focus:underline hover:underline underline-offset-2">linkedin</a></li>
                     <li><a href="https://www.viber.com" target="_blank" rel="noopener" class="capitalize text-viber focus:outline-none focus:underline hover:underline underline-offset-2">viber</a></li>

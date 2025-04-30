@@ -36,7 +36,7 @@
   }
 
   .footer-sub-title {
-    @apply text-center sm:text-start font-inter text-base md:text-lg font-[600] leading-[150%] tracking-[1px] capitalize;
+    @apply font-inter text-base md:text-lg font-[600] leading-[150%] tracking-[1px] capitalize;
   }
 
   .footer-nav-link {
