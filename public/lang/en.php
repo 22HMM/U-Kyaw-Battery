@@ -17,6 +17,20 @@ return [
         'message_us' => 'Message Us',
         'follow_us' => 'Follow Us',
     ],
+    'about' => [
+        'title' => 'About Us',
+        'subtitle' => 'About U Kyaw Battery',
+        'description' => 'At U Kyaw Battery, we provide a variety of services to meet your battery needs',
+        'about_title_1' => 'About U Kyaw Battery',
+        'about_title_2' => 'Excellence in Battery Solutions',
+        'about_description' => 'Founded in 2001, U Kyaw Battery has built a strong reputation for providing high-quality battery solutions and excellent customer service. Our founder, U Kyaw, is passionate about delivering the best products at the most competitive prices, ensuring that every customer receives personalized service tailored to their needs.',
+        'years' => 'Year 20 +',
+        'experience' => 'Experience',
+        'nation_wide' => 'Nationwide',
+        'trusted_by'  => 'Trusted by',
+        'authorized'  => 'Authorized',
+        'distributor' => 'Distributor'
+    ],
     'contact' => [
         'title' => 'Contact Us',
         'subtitle' => 'Contact Us for more details',
