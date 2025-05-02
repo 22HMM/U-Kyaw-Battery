@@ -32,8 +32,8 @@ loadEnv(__DIR__ . '/../.env'); // Enables use of env('KEY')
 # Now you can use env('KEY') to access .env variables — just like in Laravel :)
 
 // Load core helpers and dependencies
-require_once __DIR__ . '/functions.php';
 require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/functions.php';
 
 use Bramus\Router\Router;
 
@@ -58,6 +58,56 @@ $router->post('/change-language', function () {
         $_SESSION['lang'] = $lang;
         setcookie('lang', $lang, time() + (86400 * 3), "/"); // Valid for 3 days
     }
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
+    exit;
+});
+
+// Handle contact form submission
+$router->post('/contact-us', function () {
+    // Sanitize input
+    $name = trim(strip_tags($_POST['name'] ?? ''));
+    $emailRaw = trim($_POST['email'] ?? '');
+    $phone = trim(strip_tags($_POST['phone'] ?? ''));
+    $message = trim(strip_tags($_POST['message'] ?? ''));
+
+    // Validate email format
+    $email = filter_var($emailRaw, FILTER_VALIDATE_EMAIL);
+
+    $_SESSION['name'] = $name;
+    $_SESSION['email'] = $emailRaw;
+    $_SESSION['phone'] = $phone;
+    $_SESSION['message'] = $message;
+
+    // Error tracking
+    unset($_SESSION['nameError'], $_SESSION['emailError'], $_SESSION['phoneError']);
+
+    if (empty($name)) {
+        $_SESSION['nameError'] = __('contact.form.name_error');
+    }
+    if (!$email) { // Check if the email is invalid
+        $_SESSION['emailError'] = __('contact.form.email_error');
+    }
+    if (empty($phone)) {
+        $_SESSION['phoneError'] = __('contact.form.phone_error');
+    }
+
+    // Redirect if any errors
+    if (!empty($_SESSION['nameError']) || !empty($_SESSION['emailError']) || !empty($_SESSION['phoneError'])) {
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+        exit;
+    }
+
+    // Send email
+    try {
+        if (sendMail($name, $emailRaw, $phone, $message)) {
+            $_SESSION['successMessage'] = __('contact.form.success_message');
+        } else {
+            $_SESSION['errorMessage'] = __('contact.form.error_message');
+        }
+    } catch (Exception $e) {
+        $_SESSION['errorMessage'] = 'Mail error: ' . $e->getMessage();
+    }
+
     header('Location: ' . $_SERVER['HTTP_REFERER']);
     exit;
 });

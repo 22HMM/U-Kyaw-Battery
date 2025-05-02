@@ -16,6 +16,26 @@ return [
         'contact_us' => 'Contact Us',
         'message_us' => 'Message Us',
         'follow_us' => 'Follow Us',
-
-    ]
+    ],
+    'contact' => [
+        'title' => 'Contact Us',
+        'subtitle' => 'Contact Us for more details',
+        'description' => 'At U Kyaw Battery, we provide a variety of services to meet your battery needs',
+        'address_title' => 'Visit our offline store',
+        'message_title' => 'Message us here to keep in touch',
+        'form' => [
+            'name' => 'Name',
+            'email' => 'Email',
+            'phone_number' => 'Phone Number',
+            'how_can_we_help' => 'How can we help?',
+            'send_message' => 'Send Message',
+            'send_success' => 'Success!',
+            'send_error' => 'Failed!',
+            'name_error' => 'Name is required.',
+            'email_error' => 'A valid email is required.',
+            'phone_error' => 'Phone is required.',
+            'success_message' => 'Your message has been sent!',
+            'error_message'   => 'Something went wrong. Please try again.',
+        ],
+    ],
 ];
