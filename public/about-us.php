@@ -37,19 +37,21 @@
                 <p class="mb-8 text-center text-sm md:text-base xl:text-lg text-[#020B22] lg:!leading-[170%]">
                     <?= __('about.about_description'); ?>
                 </p>
+
+                <?php
+                $stats = [
+                    ['value' => __('about.years'), 'label' => __('about.experience')],
+                    ['value' => __('about.nation_wide'), 'label' => __('about.trusted_by')],
+                    ['value' => __('about.authorized'), 'label' => __('about.distributor')],
+                ];
+                ?>
                 <div class="flex flex-col flex-wrap items-center justify-center w-full max-w-xl mx-auto space-y-6 md:max-w-2xl xs:space-y-0 xs:flex-row xs:space-x-6 md:space-x-20">
-                    <div class="space-y-2 text-center">
-                        <p class="text-[#D00416] font-bold text-base md:text-lg lg:text-xl lg:!leading-[140%]"><?= __('about.years'); ?></p>
-                        <p class="text-[12px] md:text-sm lg:text-base"><?= __('about.experience'); ?></p>
-                    </div>
-                    <div class="space-y-2 text-center">
-                        <p class="text-[#D00416] font-bold text-base md:text-lg lg:text-xl lg:!leading-[140%]"><?= __('about.nation_wide'); ?></p>
-                        <p class="text-[12px] md:text-sm lg:text-base"><?= __('about.trusted_by'); ?></p>
-                    </div>
-                    <div class="space-y-2 text-center">
-                        <p class="text-[#D00416] font-bold text-base md:text-lg lg:text-xl lg:!leading-[140%]"><?= __('about.authorized'); ?></p>
-                        <p class="text-[12px] md:text-sm lg:text-base"><?= __('about.distributor'); ?></p>
-                    </div>
+                    <?php foreach ($stats as $stat): ?>
+                        <p class="space-y-2 text-center">
+                            <span class="text-[#D00416] font-bold text-base md:text-lg lg:text-xl lg:!leading-[140%] block"><?= $stat['value']; ?></span>
+                            <span class="block text-[12px] md:text-sm lg:text-base"><?= $stat['label']; ?></span>
+                        </p>
+                    <?php endforeach; ?>
                 </div>
 
             </article>
