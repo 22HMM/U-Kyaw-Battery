@@ -1,5 +1,5 @@
-<footer class="py-4 md:py-16">
-    <section class="py-6 md:py-8 theme-container border-y border-y-[#020B22]">
+<footer class="py-4 md:py-16 theme-container">
+    <section class="py-6 md:py-8 border-y border-y-[#020B22]">
         <header class="flex items-center justify-center gap-6 mb-6 md:mb-12">
             <img class="object-cover w-12 h-12 select-none"
                 draggable="false"
