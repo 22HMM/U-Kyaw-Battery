@@ -2521,6 +2521,14 @@ input:checked + .toggle-bg {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+.py-\[18px\] {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
 .pb-\[2px\] {
   padding-bottom: 2px;
 }
@@ -3110,6 +3118,10 @@ h6 {
     margin-top: 65px;
   }
 
+  .md\:mt-\[60px\] {
+    margin-top: 60px;
+  }
+
   .md\:block {
     display: block;
   }
@@ -3260,6 +3272,18 @@ h6 {
     margin-top: 80px;
   }
 
+  .lg\:mt-\[75px\] {
+    margin-top: 75px;
+  }
+
+  .lg\:mt-\[72px\] {
+    margin-top: 72px;
+  }
+
+  .lg\:mt-\[70px\] {
+    margin-top: 70px;
+  }
+
   .lg\:h-\[36px\] {
     height: 36px;
   }
@@ -3322,6 +3346,26 @@ h6 {
     padding-bottom: 2rem;
   }
 
+  .lg\:py-7 {
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+  }
+
+  .lg\:py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .lg\:py-5 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .lg\:py-\[22px\] {
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -3377,6 +3421,11 @@ h6 {
   .xl\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .xl\:py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .xl\:text-2xl {

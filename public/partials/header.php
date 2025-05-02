@@ -63,11 +63,11 @@
 
             <!-- Nav links for large screens -->
             <ul class="items-center hidden space-x-3 text-sm md:text-[12px] lg:text-sm font-normal capitalize transition-all duration-300 ease-in-out md:flex lg:space-x-5">
-                <li><a href="/" class="nav-link lg:px-4 xl:px-6 px-2 py-6 lg:py-8 <?= ($currentPath == '/') ? 'active' : ''; ?>"><?= __('navbar.home'); ?></a></li>
-                <li><a href="/products" class="nav-link lg:px-2 xl:px-6 px-2 py-6 lg:py-8 <?= ($currentPath == '/products') ? 'active' : ''; ?>"><?= __('navbar.products'); ?></a></li>
-                <li><a href="/services" class="nav-link lg:px-2 xl:px-6 px-2 py-6 lg:py-8 <?= ($currentPath == '/services') ? 'active' : ''; ?>"><?= __('navbar.services'); ?></a></li>
-                <li><a href="/about-us" class="nav-link lg:px-2 xl:px-6 px-2 py-6 lg:py-8 <?= ($currentPath == '/about-us') ? 'active' : ''; ?>"><?= __('navbar.about_us'); ?></a></li>
-                <li><a href="/contact-us" class="nav-link lg:px-2 xl:px-6 px-2 py-6 lg:py-8 <?= ($currentPath == '/contact-us') ? 'active' : ''; ?>"><?= __('navbar.contact_us'); ?></a></li>
+                <li><a href="/" class="nav-link lg:px-4 xl:px-6 px-2 py-[18px] lg:py-[22px] xl:py-8 <?= ($currentPath == '/') ? 'active' : ''; ?>"><?= __('navbar.home'); ?></a></li>
+                <li><a href="/products" class="nav-link lg:px-2 xl:px-6 px-2 py-[18px] lg:py-[22px] xl:py-8 <?= ($currentPath == '/products') ? 'active' : ''; ?>"><?= __('navbar.products'); ?></a></li>
+                <li><a href="/services" class="nav-link lg:px-2 xl:px-6 px-2 py-[18px] lg:py-[22px] xl:py-8 <?= ($currentPath == '/services') ? 'active' : ''; ?>"><?= __('navbar.services'); ?></a></li>
+                <li><a href="/about-us" class="nav-link lg:px-2 xl:px-6 px-2 py-[18px] lg:py-[22px] xl:py-8 <?= ($currentPath == '/about-us') ? 'active' : ''; ?>"><?= __('navbar.about_us'); ?></a></li>
+                <li><a href="/contact-us" class="nav-link lg:px-2 xl:px-6 px-2 py-[18px] lg:py-[22px] xl:py-8 <?= ($currentPath == '/contact-us') ? 'active' : ''; ?>"><?= __('navbar.contact_us'); ?></a></li>
                 <li>
                     <!-- Dropdown button -->
                     <button id="language-dropdown-button" data-dropdown-toggle="language-dropdown"
