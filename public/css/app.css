@@ -3264,6 +3264,11 @@ h6 {
 
 @media (min-width: 1024px) {
 
+  .lg\:mx-2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
   .lg\:ms-5 {
     margin-inline-start: 1.25rem;
   }
@@ -3428,6 +3433,11 @@ h6 {
     padding-bottom: 2rem;
   }
 
+  .xl\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
   .xl\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -3441,8 +3451,37 @@ h6 {
 
 @media (min-width: 1536px) {
 
+  .\32xl\:mx-2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .\32xl\:mx-8 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .\32xl\:mx-6 {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
   .\32xl\:max-w-\[1563px\] {
     max-width: 1563px;
+  }
+
+  .\32xl\:max-w-\[calc\(1563px-8px\)\] {
+    max-width: calc(1563px - 8px);
+  }
+
+  .\32xl\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .\32xl\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .\32xl\:text-\[70px\] {

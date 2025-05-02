@@ -67,8 +67,8 @@
 </section>
 
 <!-- Contact Form Section -->
-<section class="my-[60px] md:my-[80px] bg-white max-w-[2560px] 2xl:max-w-[1563px] mx-auto">
-    <div class="grid items-center gap-8 md:grid-cols-2" aria-label="Contact Form Section" role="region">
+<section class="my-[60px] md:my-[80px] max-w-[2560px] bg-white 2xl:max-w-[1563px] mx-auto">
+    <div class="grid items-center gap-8 md:grid-cols-2 2xl:mx-6" aria-label="Contact Form Section" role="region">
         <!-- Left Image (outside container size) -->
         <figure class="hidden overflow-hidden aspect-w-3 aspect-h-4 md:block">
             <img
