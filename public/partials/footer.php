@@ -40,19 +40,19 @@
                 <address class="not-italic text-[#545254] text-sm md:text-base">
                     <ul class="space-y-4 ">
                         <li>
-                            <a href="https://maps.app.goo.gl/FEzJzZub7bHZ3QzE6" target="_blank" rel="noopener" class="focus:outline-none focus:text-theme">
+                            <a href="https://maps.app.goo.gl/FEzJzZub7bHZ3QzE6" target="_blank" rel="noopener" class="focus:outline-none focus:text-theme focus-visible:ring-2 focus-visible:ring-theme focus-visible:ring-offset-2">
                                 No. (320/27), Ground Floor, Upper Baho Road, Mayangone Township, Yangon.
                             </a>
                         </li>
                         <li class="flex items-center gap-2">
-                            <a href="tel:+09266559969" class="focus:outline-none focus:text-theme">09266559969</a>/
-                            <a href="tel:+09421043703" class="focus:outline-none focus:text-theme">09421043703</a>
+                            <a href="tel:+09266559969" class="focus:outline-none focus:text-theme focus-visible:ring-2 focus-visible:ring-theme focus-visible:ring-offset-2">09266559969</a>/
+                            <a href="tel:+09421043703" class="focus:outline-none focus:text-theme focus-visible:ring-2 focus-visible:ring-theme focus-visible:ring-offset-2">09421043703</a>
                         </li>
                         <li>
-                            <a href="mailto:kyawbattery664@gmail.com" class="focus:outline-none focus:text-theme">kyawbattery664@gmail.com</a>
+                            <a href="mailto:kyawbattery664@gmail.com" class="focus:outline-none focus:text-theme focus-visible:ring-2 focus-visible:ring-theme focus-visible:ring-offset-2">kyawbattery664@gmail.com</a>
                         </li>
                         <li class="inline-block">
-                            <a href="/contact-us" class="flex items-center gap-3 capitalize focus:outline-none focus:text-theme hover:text-theme group">
+                            <a href="/contact-us" class="flex items-center gap-3 capitalize focus:outline-none focus:text-theme focus-visible:ring-2 focus-visible:ring-theme focus-visible:ring-offset-2 hover:text-theme group">
                                 <span><?= __('footer.message_us') ?></span>
                                 <svg class="text-[#6E6D6E] w-6 h-6 transition-transform duration-300 ease-linear shrink-0 group-hover:transform group-hover:translate-x-1 group-focus:translate-x-1 group-hover:text-theme group-focus:text-theme"
                                     aria-hidden="true"
