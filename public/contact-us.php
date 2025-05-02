@@ -6,7 +6,7 @@
         <div class="hidden md:block"></div>
         <article class="absolute z-10 flex flex-col w-full max-w-[250px] xs:max-w-[350px] sm:max-w-xl lg:max-w-2xl leading-[120%] gap-6 px-2 transform -translate-y-1/2 md:px-6 left-4 sm:left-6 top-1/2 bg-[#FFFCFF] py-6 sm:py-12 md:py-16 lg:py-24">
             <p class="text-sm capitalize md:text-base text-secondary"><?= __('contact.title'); ?></p>
-            <h2 class="contact-title"><?= __('contact.subtitle'); ?></h2>
+            <h2 class="banner-title"><?= __('contact.subtitle'); ?></h2>
             <p class="text-sm md:text-base"><?= __('contact.description'); ?></p>
         </article>
         <figure class="overflow-hidden md:col-span-2 aspect-w-3 aspect-h-3 xs:aspect-h-2">
@@ -24,7 +24,7 @@
 
 <!-- Addresses Section -->
 <section class="py-[60px] md:py-[80px] text-[#020B22]">
-    <div class="py-6 md:py-20" style="background-image: url('/images/contact-us-address-background.jpg'); background-size: cover; background-position:center; background-repeat: no-repeat;">
+    <div class="py-6 md:py-20" style="background-image: url('/images/page-background.jpg'); background-size: cover; background-position:center; background-repeat: no-repeat;">
         <div class="theme-container">
             <article class="w-full max-w-2xl mx-auto">
                 <h2 class="mb-8 text-center capitalize heading-2">

@@ -6,6 +6,8 @@ DOC.addEventListener('DOMContentLoaded', function () {
     const contactForm = this.querySelector('#contact-form');
     const contactSubmitButton = this.querySelector('#contact-submit-button');
 
+    if (!contactForm) return;
+
     contactForm.addEventListener('submit', () => {
         // Disable the submit button to prevent multiple submissions
         contactSubmitButton.disabled = true;

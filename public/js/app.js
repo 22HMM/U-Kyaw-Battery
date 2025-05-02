@@ -9990,6 +9990,7 @@ var DOC = document;
 DOC.addEventListener('DOMContentLoaded', function () {
   var contactForm = this.querySelector('#contact-form');
   var contactSubmitButton = this.querySelector('#contact-submit-button');
+  if (!contactForm) return;
   contactForm.addEventListener('submit', function () {
     // Disable the submit button to prevent multiple submissions
     contactSubmitButton.disabled = true;
