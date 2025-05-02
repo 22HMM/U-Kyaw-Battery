@@ -1,4 +1,4 @@
-<footer class="py-4 md:py-16 bg-[#FFFCFF]">
+<footer class="py-4 md:py-16">
     <section class="py-6 md:py-8 theme-container border-y border-y-[#020B22]">
         <header class="flex items-center justify-center gap-6 mb-6 md:mb-12">
             <img class="object-cover w-12 h-12 select-none"
@@ -16,7 +16,7 @@
 
             <?php // Quick Links Navigation            
             ?>
-            <nav aria-labelledby="footer-links-heading">
+            <nav aria-labelledby="footer-links-heading" role="navigation" aria-label="Quick Links">
                 <h3 id="footer-links-heading" class="mb-6 footer-sub-title">
                     <?= __('footer.links') ?>
                 </h3>

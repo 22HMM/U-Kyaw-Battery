@@ -45,7 +45,7 @@
 }
 
 html {
-  @apply font-inter scroll-smooth selection:bg-secondary selection:text-white;
+  @apply font-inter scroll-smooth selection:bg-theme selection:text-white;
 }
 
 h1,
