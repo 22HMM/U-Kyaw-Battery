@@ -5,7 +5,7 @@ $currentPath = $_SERVER['REQUEST_URI'];
 
 /** Define page-specific boolean flags for easier reuse in navigation */
 $isHome = $currentPath === '/';
-$isProducts = $currentPath === '/products';
+$isProducts = $currentPath === '/products' || str_starts_with($currentPath, '/products/');
 $isServices = $currentPath === '/services';
 $isAbout = $currentPath === '/about-us';
 $isContact = $currentPath === '/contact-us';
@@ -76,31 +76,31 @@ $isContact = $currentPath === '/contact-us';
             <ul class="items-center hidden space-x-3 text-sm md:text-[12px] lg:text-sm font-normal capitalize transition-all duration-300 ease-in-out md:flex lg:space-x-5">
                 <li>
                     <a href="/" class="nav-link lg:px-4 xl:px-6 px-2 py-[18px] lg:py-[22px] xl:py-8 <?= $isHome ? 'active' : ''; ?>"
-                        aria-current="<?= $isHome ? 'page' : '' ?>">
+                        <?= $isHome ? 'aria-current="page"' : '' ?>>
                         <?= __('navbar.home'); ?>
                     </a>
                 </li>
                 <li>
                     <a href="/products" class="nav-link lg:px-2 xl:px-6 px-2 py-[18px] lg:py-[22px] xl:py-8 <?= $isProducts ? 'active' : ''; ?>"
-                        aria-current="<?= $isProducts ? 'page' : '' ?>">
+                        <?= $isProducts ? 'aria-current="page"' : '' ?>>
                         <?= __('navbar.products'); ?>
                     </a>
                 </li>
                 <li>
                     <a href="/services" class="nav-link lg:px-2 xl:px-6 px-2 py-[18px] lg:py-[22px] xl:py-8 <?= $isServices ? 'active' : ''; ?>"
-                        aria-current="<?= $isServices ? 'page' : '' ?>">
+                        <?= $isServices ? 'aria-current="page"' : '' ?>>
                         <?= __('navbar.services'); ?>
                     </a>
                 </li>
                 <li>
                     <a href="/about-us" class="nav-link lg:px-2 xl:px-6 px-2 py-[18px] lg:py-[22px] xl:py-8 <?= $isAbout ? 'active' : ''; ?>"
-                        aria-current="<?= $isAbout ? 'page' : '' ?>">
+                        <?= $isAbout ? 'aria-current="page"' : '' ?>>
                         <?= __('navbar.about_us'); ?>
                     </a>
                 </li>
                 <li>
                     <a href="/contact-us" class="nav-link lg:px-2 xl:px-6 px-2 py-[18px] lg:py-[22px] xl:py-8 <?= $isContact ? 'active' : ''; ?>"
-                        aria-current="<?= $isContact ? 'page' : '' ?>">
+                        <?= $isContact ? 'aria-current="page"' : '' ?>>
                         <?= __('navbar.contact_us'); ?>
                     </a>
                 </li>
@@ -190,31 +190,31 @@ $isContact = $currentPath === '/contact-us';
             <ul class="flex flex-col mt-10 space-y-5 text-sm font-normal capitalize transition-all duration-300 ease-in-out theme-container md:hidden">
                 <li>
                     <a href="/" class="nav-link p-2 <?= $isHome ? 'active' : ''; ?>"
-                        aria-current="<?= $isHome ? 'page' : '' ?>">
+                        <?= $isHome ? 'aria-current="page"' : '' ?>>
                         <?= __('navbar.home'); ?>
                     </a>
                 </li>
                 <li>
                     <a href="/products" class="nav-link p-2 <?= $isProducts ? 'active' : ''; ?>"
-                        aria-current="<?= $isProducts ? 'page' : '' ?>">
+                        <?= $isProducts ? 'aria-current="page"' : '' ?>>
                         <?= __('navbar.products'); ?>
                     </a>
                 </li>
                 <li>
                     <a href="/services" class="nav-link p-2 <?= $isServices ? 'active' : ''; ?>"
-                        aria-current="<?= $isServices ? 'page' : '' ?>">
+                        <?= $isServices ? 'aria-current="page"' : '' ?>>
                         <?= __('navbar.services'); ?>
                     </a>
                 </li>
                 <li>
                     <a href="/about-us" class="nav-link p-2 <?= $isAbout ? 'active' : ''; ?>"
-                        aria-current="<?= $isAbout ? 'page' : '' ?>">
+                        <?= $isAbout ? 'aria-current="page"' : '' ?>>
                         <?= __('navbar.about_us'); ?>
                     </a>
                 </li>
                 <li>
                     <a href="/contact-us" class="nav-link p-2 <?= $isContact ? 'active' : ''; ?>"
-                        aria-current="<?= $isContact ? 'page' : '' ?>">
+                        <?= $isContact ? 'aria-current="page"' : '' ?>>
                         <?= __('navbar.contact_us'); ?>
                     </a>
                 </li>

@@ -46,7 +46,7 @@ $currentProducts = $currentCategory ? getProductsByCategoryId($currentCategory['
                     <li class="">
                         <a href="/products/<?= $categorySlug; ?>"
                             class="tab <?= $isActive ? 'tab--active' : 'tab--default' ?>"
-                            <?= $isActive ? 'aria-current="page"' : '' ?>">
+                            <?= $isActive ? 'aria-current="page"' : '' ?>>
                             <?= $category['name'] ?>
                         </a>
                     </li>
