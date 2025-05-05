@@ -17,6 +17,25 @@ return [
         'message_us' => 'Message Us',
         'follow_us' => 'Follow Us',
     ],
+    'services' => [
+        'title' => 'Services',
+        'subtitle' => 'One-Stop Shop for All Battery Needs',
+        'description' => 'At U Kyaw Battery, we provide a variety of services to meet your battery needs',
+        'services'    => [
+            'service_1' => [
+                'title' => 'Battery Installation & Maintenance',
+                'description' => 'Our team provides hassle-free battery installations and thorough maintenance services. Whether you need a replacement or routine check-up, we ensure that your battery functions at its best.',
+            ],
+            'service_2' => [
+                'title' => 'After-Sales Services',
+                'description' => 'From battery charging and acid refilling to battery testing and repair, we offer a wide range of after-sales services. We also provide battery transportation, disposal, and sales of used or refurbished batteries.',
+            ],
+            'service_3' => [
+                'title' => 'Warranty Support',
+                'description' => 'All our batteries come with a warranty period, and we offer free maintenance services for certain issues within the warranty period.',
+            ],
+        ],
+    ],
     'about' => [
         'title' => 'About Us',
         'subtitle' => 'About U Kyaw Battery',
