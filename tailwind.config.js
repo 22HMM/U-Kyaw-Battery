@@ -24,6 +24,21 @@ module.exports = {
         "ibm-plex-sans": ['IBM Plex Sans', 'sans-serif'],
         "noto-sans-myanmar": ['Noto Sans Myanmar', 'Inter', 'sans-serif'],
       },
+      keyframes: {
+        phoneRing: {
+          '0%': { transform: 'rotate(0deg)' },
+          '10%': { transform: 'rotate(-15deg)' },
+          '20%': { transform: 'rotate(15deg)' },
+          '30%': { transform: 'rotate(-10deg)' },
+          '40%': { transform: 'rotate(10deg)' },
+          '50%': { transform: 'rotate(-5deg)' },
+          '60%': { transform: 'rotate(5deg)' },
+          '70%, 100%': { transform: 'rotate(0deg)' },
+        },
+      },
+      animation: {
+        phoneRing: 'phoneRing 0.6s ease-in-out',
+      },
     },
   },
   corePlugins: {

@@ -6,7 +6,7 @@
  * Sets up routing with Bramus Router, loads environment configs, handles session language settings,
  * and serves dynamic page routes like Home, Products, etc.
  * 
- * * * NOTE: If the project needs to be converted to a WordPress-based CMS in the future:
+ * * NOTE: If the project needs to be converted to a WordPress-based CMS in the future:
  *   - Replace the custom routing system with WordPress's built-in routing.
  *   - Replace manual loading of environment variables with WordPress's native configuration system.
  * 
@@ -51,6 +51,30 @@ $router->get('/services', fn() => include_once __DIR__ . '/services.php');
 $router->get('/about-us', fn() => include_once __DIR__ . '/about-us.php');
 $router->get('/contact-us', fn() => include_once __DIR__ . '/contact-us.php');
 
+// Product page but with different category & products data
+$router->get('/products/{category}', function ($categorySlug) {
+
+    $categories = getCategories();
+    $matchedCategory = null;
+
+    foreach ($categories as $cat) {
+        $slug = strtolower(str_replace(' ', '-', $cat['name']));
+        if ($slug === $categorySlug) {
+            $matchedCategory = $cat;
+            break;
+        }
+    }
+
+    if (!$matchedCategory) {
+        // Safe 404 redirect before headers are sent
+        header("Location: /404.php");
+        exit;
+    }
+
+    $_SESSION['category'] = $categorySlug;
+    include_once __DIR__ . '/products.php';
+});
+
 // Language switcher
 $router->post('/change-language', function () {
     $lang = $_POST['lang'] ?? 'en';
@@ -74,7 +98,7 @@ $router->post('/contact-us', function () {
     $email = filter_var($emailRaw, FILTER_VALIDATE_EMAIL);
 
     $_SESSION['name'] = $name;
-    $_SESSION['email'] = $emailRaw;
+    $_SESSION['email'] = $email;
     $_SESSION['phone'] = $phone;
     $_SESSION['message'] = $message;
 
@@ -99,7 +123,7 @@ $router->post('/contact-us', function () {
 
     // Send email
     try {
-        if (sendMail($name, $emailRaw, $phone, $message)) {
+        if (sendMail($name, $email, $phone, $message)) {
             $_SESSION['successMessage'] = __('contact.form.success_message');
         } else {
             $_SESSION['errorMessage'] = __('contact.form.error_message');

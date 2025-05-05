@@ -77,3 +77,84 @@ function sendMail(string $name, string $email, string $phone, string $message): 
         throw new Exception("Message could not be sent. Mailer Error: {$e->getMessage()}");
     }
 }
+
+/**
+ * Convert a string into a URL-friendly slug.
+ *
+ * @param string $name
+ * @return string
+ */
+function slugify($name): string
+{
+    $slug = strtolower($name); // convert into lowercase
+
+    // abcd 1234 နဲ့ '-' ကလွဲရင် ကျန်တာအကုန် '-' ပြောင်း
+    $slug = preg_replace('/[^a-z0-9]+/i', '-', $slug);
+
+    // Trim hyphens from both ends
+    $slug = trim($slug, '-');
+
+    return $slug;
+}
+
+/** 
+ * Load data from file once and return it. 
+ * 
+ * @return array 
+ */
+function getData(): array
+{
+    static $data = null;
+    if ($data === null) {
+        $data = require_once __DIR__ . '/database.php';
+    }
+    return $data;
+}
+
+/** 
+ * Get all categories
+ * 
+ * @return array 
+ */
+function getCategories(): array
+{
+    return getData()['categories'];
+}
+
+/**
+ * Get category by its slug.
+ * 
+ * @param string $slug
+ * @return array|null
+ */
+function getCategoryBySlug(string $slug): ?array
+{
+    $categories = getData()['categories'];
+    foreach ($categories as $category) {
+        if (slugify($category['name']) === $slug) {
+            return $category;
+        }
+    }
+    return null;
+}
+
+
+/**
+ * Retrieve products by category ID.
+ *
+ * If a valid category ID is provided, returns products in that category.
+ * If no ID is provided or no products match the ID, returns an empty array.
+ *
+ * @param int|null $categoryId The category ID to filter by.
+ * @return array Filtered list of products or an empty array.
+ */
+function getProductsByCategoryId(?int $categoryId = null): array
+{
+    $products = getData()['products'];
+
+    if ($categoryId === null) {
+        return []; // Return empty if no ID is provided
+    }
+
+    return array_values(array_filter($products, fn($product) => $product['category_id'] === $categoryId));
+}

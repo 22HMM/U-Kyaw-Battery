@@ -17,6 +17,20 @@ return [
         'message_us' => 'Message Us',
         'follow_us' => 'Follow Us',
     ],
+    'products' => [
+        'title' => 'Products',
+        'subtitle' => 'Top International Brands',
+        'description' => 'We offer batteries from top international brands which are sourced from trusted manufacturers to ensure high quality and performance.',
+        'categories' => [
+            1 => 'UPLUS is a leading automotive battery manufacturer with advanced production facilities in India and Malaysia. The company offers a range of maintenance-free car batteries utilizing Pb-Ca alloy grids, known for superior starting ability, long lifespan, excellent charging acceptance, and reliable performance in low temperatures. These batteries are suitable for passenger cars, commercial vehicles, tractors, and construction machinery.(uplusbattery.com)',
+            2 => 'SCOPE is a prominent battery brand based in the United Arab Emirates, specializing in high-quality batteries designed for various applications. Their products are engineered to deliver reliable performance and longevity, catering to the needs of diverse sectors.',
+            3 => 'VARTA is a globally recognized German brand, renowned for its innovative battery solutions. They provide a wide range of batteries suitable for automotive, industrial, and consumer applications. VARTA batteries are known for their advanced technology, exceptional performance, and long service life.(varta-automotive.com)',
+            4 => 'QUANTUM is an Indonesian battery brand offering a variety of battery solutions for different applications. Their products are designed to meet high standards of quality and reliability, ensuring optimal performance across various uses.',
+            5 => 'ASASHI is a reputable Thai battery manufacturer, producing batteries known for their durability and efficiency. Their products are widely used in automotive and industrial sectors, providing dependable power solutions.',
+            6 => 'FUKUDA is another esteemed battery brand from Thailand, offering a range of batteries recognized for their superior power solutions. They are committed to delivering products that ensure high performance and reliability for various applications.',
+            7 => 'MOTOLITE is a leading battery brand from the Philippines, known for manufacturing robust and long-lasting batteries. Their products cater to automotive, industrial, and household needs, ensuring strong performance and reliability.',
+        ],
+    ],
     'services' => [
         'title' => 'Services',
         'subtitle' => 'One-Stop Shop for All Battery Needs',
