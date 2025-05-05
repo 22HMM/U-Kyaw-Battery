@@ -1,4 +1,15 @@
-<?php $currentPath = $_SERVER['REQUEST_URI']; ?>
+<?php
+
+/** Get the current path from the request URI */
+$currentPath = $_SERVER['REQUEST_URI'];
+
+/** Define page-specific boolean flags for easier reuse in navigation */
+$isHome = $currentPath === '/';
+$isProducts = $currentPath === '/products';
+$isServices = $currentPath === '/services';
+$isAbout = $currentPath === '/about-us';
+$isContact = $currentPath === '/contact-us';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -63,11 +74,36 @@
 
             <!-- Nav links for large screens -->
             <ul class="items-center hidden space-x-3 text-sm md:text-[12px] lg:text-sm font-normal capitalize transition-all duration-300 ease-in-out md:flex lg:space-x-5">
-                <li><a href="/" class="nav-link lg:px-4 xl:px-6 px-2 py-[18px] lg:py-[22px] xl:py-8 <?= ($currentPath == '/') ? 'active' : ''; ?>"><?= __('navbar.home'); ?></a></li>
-                <li><a href="/products" class="nav-link lg:px-2 xl:px-6 px-2 py-[18px] lg:py-[22px] xl:py-8 <?= ($currentPath == '/products') ? 'active' : ''; ?>"><?= __('navbar.products'); ?></a></li>
-                <li><a href="/services" class="nav-link lg:px-2 xl:px-6 px-2 py-[18px] lg:py-[22px] xl:py-8 <?= ($currentPath == '/services') ? 'active' : ''; ?>"><?= __('navbar.services'); ?></a></li>
-                <li><a href="/about-us" class="nav-link lg:px-2 xl:px-6 px-2 py-[18px] lg:py-[22px] xl:py-8 <?= ($currentPath == '/about-us') ? 'active' : ''; ?>"><?= __('navbar.about_us'); ?></a></li>
-                <li><a href="/contact-us" class="nav-link lg:px-2 xl:px-6 px-2 py-[18px] lg:py-[22px] xl:py-8 <?= ($currentPath == '/contact-us') ? 'active' : ''; ?>"><?= __('navbar.contact_us'); ?></a></li>
+                <li>
+                    <a href="/" class="nav-link lg:px-4 xl:px-6 px-2 py-[18px] lg:py-[22px] xl:py-8 <?= $isHome ? 'active' : ''; ?>"
+                        aria-current="<?= $isHome ? 'page' : '' ?>">
+                        <?= __('navbar.home'); ?>
+                    </a>
+                </li>
+                <li>
+                    <a href="/products" class="nav-link lg:px-2 xl:px-6 px-2 py-[18px] lg:py-[22px] xl:py-8 <?= $isProducts ? 'active' : ''; ?>"
+                        aria-current="<?= $isProducts ? 'page' : '' ?>">
+                        <?= __('navbar.products'); ?>
+                    </a>
+                </li>
+                <li>
+                    <a href="/services" class="nav-link lg:px-2 xl:px-6 px-2 py-[18px] lg:py-[22px] xl:py-8 <?= $isServices ? 'active' : ''; ?>"
+                        aria-current="<?= $isServices ? 'page' : '' ?>">
+                        <?= __('navbar.services'); ?>
+                    </a>
+                </li>
+                <li>
+                    <a href="/about-us" class="nav-link lg:px-2 xl:px-6 px-2 py-[18px] lg:py-[22px] xl:py-8 <?= $isAbout ? 'active' : ''; ?>"
+                        aria-current="<?= $isAbout ? 'page' : '' ?>">
+                        <?= __('navbar.about_us'); ?>
+                    </a>
+                </li>
+                <li>
+                    <a href="/contact-us" class="nav-link lg:px-2 xl:px-6 px-2 py-[18px] lg:py-[22px] xl:py-8 <?= $isContact ? 'active' : ''; ?>"
+                        aria-current="<?= $isContact ? 'page' : '' ?>">
+                        <?= __('navbar.contact_us'); ?>
+                    </a>
+                </li>
                 <li>
                     <!-- Dropdown button -->
                     <button id="language-dropdown-button" data-dropdown-toggle="language-dropdown"
@@ -152,11 +188,36 @@
                 <span class="sr-only">Close menu</span>
             </button>
             <ul class="flex flex-col mt-10 space-y-5 text-sm font-normal capitalize transition-all duration-300 ease-in-out theme-container md:hidden">
-                <li><a href="/" class="nav-link p-2 <?= ($currentPath == '/') ? 'active' : ''; ?>"><?= __('navbar.home'); ?></a></li>
-                <li><a href="/products" class="nav-link p-2 <?= ($currentPath == '/products') ? 'active' : ''; ?>"><?= __('navbar.products'); ?></a></li>
-                <li><a href="/services" class="nav-link p-2 <?= ($currentPath == '/services') ? 'active' : ''; ?>"><?= __('navbar.services'); ?></a></li>
-                <li><a href="/about-us" class="nav-link p-2 <?= ($currentPath == '/about-us') ? 'active' : ''; ?>"><?= __('navbar.about_us'); ?></a></li>
-                <li><a href="/contact-us" class="nav-link p-2 <?= ($currentPath == '/contact-us') ? 'active' : ''; ?>"><?= __('navbar.contact_us'); ?></a></li>
+                <li>
+                    <a href="/" class="nav-link p-2 <?= $isHome ? 'active' : ''; ?>"
+                        aria-current="<?= $isHome ? 'page' : '' ?>">
+                        <?= __('navbar.home'); ?>
+                    </a>
+                </li>
+                <li>
+                    <a href="/products" class="nav-link p-2 <?= $isProducts ? 'active' : ''; ?>"
+                        aria-current="<?= $isProducts ? 'page' : '' ?>">
+                        <?= __('navbar.products'); ?>
+                    </a>
+                </li>
+                <li>
+                    <a href="/services" class="nav-link p-2 <?= $isServices ? 'active' : ''; ?>"
+                        aria-current="<?= $isServices ? 'page' : '' ?>">
+                        <?= __('navbar.services'); ?>
+                    </a>
+                </li>
+                <li>
+                    <a href="/about-us" class="nav-link p-2 <?= $isAbout ? 'active' : ''; ?>"
+                        aria-current="<?= $isAbout ? 'page' : '' ?>">
+                        <?= __('navbar.about_us'); ?>
+                    </a>
+                </li>
+                <li>
+                    <a href="/contact-us" class="nav-link p-2 <?= $isContact ? 'active' : ''; ?>"
+                        aria-current="<?= $isContact ? 'page' : '' ?>">
+                        <?= __('navbar.contact_us'); ?>
+                    </a>
+                </li>
                 <li>
                     <!-- Dropdown button -->
                     <button id="language-dropdown-button-sm" data-dropdown-toggle="language-dropdown-sm"
