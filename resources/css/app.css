@@ -24,7 +24,8 @@
   }
 
   .nav-link {
-    @apply focus:outline-none focus:text-[#0C40C5] hover:text-[#0C40C5] transition-colors duration-300 ease-linear hover:bg-[#2D34951A] hover:border-b-theme focus:border-b-theme border-b-[3px] border-b-transparent whitespace-nowrap focus-visible:ring-2 focus-visible:ring-theme focus-visible:ring-offset-2;
+    @apply focus:text-[#0C40C5] hover:text-[#0C40C5] transition-colors duration-300 ease-linear hover:bg-[#2D34951A] hover:border-b-theme focus:border-b-theme border-b-[3px] border-b-transparent whitespace-nowrap;
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-theme focus-visible:ring-offset-2 focus-visible:xl:!py-[28px];
   }
 
   .active {
@@ -44,7 +45,7 @@
   }
 
   .content-text {
-    @apply text-sm md:text-base font-normal;
+    @apply text-sm font-normal md:text-base;
   }
 
   .banner-title {

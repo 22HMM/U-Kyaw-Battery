@@ -1711,6 +1711,13 @@ input:checked + .toggle-bg {
   --tw-ring-color: rgb(54 63 179 / var(--tw-ring-opacity, 1));
   --tw-ring-offset-width: 2px;
 }
+@media (min-width: 1280px) {
+
+  .nav-link:focus-visible {
+    padding-top: 28px !important;
+    padding-bottom: 28px !important;
+  }
+}
 .active {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(54 63 179 / var(--tw-border-opacity, 1));
@@ -2395,9 +2402,6 @@ input:checked + .toggle-bg {
 .scroll-smooth {
   scroll-behavior: smooth;
 }
-.whitespace-nowrap {
-  white-space: nowrap;
-}
 .rounded {
   border-radius: 0.25rem;
 }
@@ -2543,11 +2547,11 @@ input:checked + .toggle-bg {
 .p-2\.5 {
   padding: 0.625rem;
 }
-.p-4 {
-  padding: 1rem;
-}
 .p-3 {
   padding: 0.75rem;
+}
+.p-4 {
+  padding: 1rem;
 }
 .px-2 {
   padding-left: 0.5rem;
@@ -2687,6 +2691,10 @@ input:checked + .toggle-bg {
   --tw-text-opacity: 1;
   color: rgb(2 11 34 / var(--tw-text-opacity, 1));
 }
+.text-\[\#1F1F1F\] {
+  --tw-text-opacity: 1;
+  color: rgb(31 31 31 / var(--tw-text-opacity, 1));
+}
 .text-\[\#344054\] {
   --tw-text-opacity: 1;
   color: rgb(52 64 84 / var(--tw-text-opacity, 1));
@@ -2770,10 +2778,6 @@ input:checked + .toggle-bg {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-.text-\[\#1F1F1F\] {
-  --tw-text-opacity: 1;
-  color: rgb(31 31 31 / var(--tw-text-opacity, 1));
 }
 .underline {
   text-decoration-line: underline;
@@ -3004,6 +3008,19 @@ h6 {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-\[2D34951A\]:hover {
+  background-color: 2D34951A;
+}
+
+.hover\:bg-\[\#\#DAE4FF\]:hover {
+  background-color: ##DAE4FF;
+}
+
+.hover\:bg-\[\#DAE4FF\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(218 228 255 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:text-\[\#0C40C5\]:hover {
   --tw-text-opacity: 1;
   color: rgb(12 64 197 / var(--tw-text-opacity, 1));
@@ -3103,14 +3120,14 @@ h6 {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
-.focus-visible\:ring-theme:focus-visible {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(54 63 179 / var(--tw-ring-opacity, 1));
-}
-
 .focus-visible\:ring-\[\#0C40C5\]:focus-visible {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(12 64 197 / var(--tw-ring-opacity, 1));
+}
+
+.focus-visible\:ring-theme:focus-visible {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(54 63 179 / var(--tw-ring-opacity, 1));
 }
 
 .focus-visible\:ring-offset-2:focus-visible {
@@ -3126,14 +3143,14 @@ h6 {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.group:hover .group-hover\:text-theme {
-  --tw-text-opacity: 1;
-  color: rgb(54 63 179 / var(--tw-text-opacity, 1));
-}
-
 .group:hover .group-hover\:text-\[\#0C40C5\] {
   --tw-text-opacity: 1;
   color: rgb(12 64 197 / var(--tw-text-opacity, 1));
+}
+
+.group:hover .group-hover\:text-theme {
+  --tw-text-opacity: 1;
+  color: rgb(54 63 179 / var(--tw-text-opacity, 1));
 }
 
 .group:hover .group-hover\:underline {
@@ -3145,14 +3162,14 @@ h6 {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.group:focus .group-focus\:text-theme {
-  --tw-text-opacity: 1;
-  color: rgb(54 63 179 / var(--tw-text-opacity, 1));
-}
-
 .group:focus .group-focus\:text-\[\#0C40C5\] {
   --tw-text-opacity: 1;
   color: rgb(12 64 197 / var(--tw-text-opacity, 1));
+}
+
+.group:focus .group-focus\:text-theme {
+  --tw-text-opacity: 1;
+  color: rgb(54 63 179 / var(--tw-text-opacity, 1));
 }
 
 @media (min-width: 480px) {
@@ -3262,6 +3279,10 @@ h6 {
 
   .md\:w-\[40px\] {
     width: 40px;
+  }
+
+  .md\:w-24 {
+    width: 6rem;
   }
 
   .md\:max-w-2xl {
@@ -3433,6 +3454,10 @@ h6 {
     width: 48px;
   }
 
+  .lg\:w-28 {
+    width: 7rem;
+  }
+
   .lg\:max-w-2xl {
     max-width: 42rem;
   }
@@ -3552,6 +3577,10 @@ h6 {
     width: 48px;
   }
 
+  .xl\:w-32 {
+    width: 8rem;
+  }
+
   .xl\:gap-44 {
     gap: 11rem;
   }
@@ -3584,6 +3613,11 @@ h6 {
   .xl\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .focus-visible\:xl\:\!py-\[28px\]:focus-visible {
+    padding-top: 28px !important;
+    padding-bottom: 28px !important;
   }
 }
 

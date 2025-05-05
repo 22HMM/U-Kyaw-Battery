@@ -102,14 +102,14 @@
                     </button>
 
                     <!-- Dropdown menu -->
-                    <div id="language-dropdown" class="z-10 hidden w-32 bg-transparent">
+                    <div id="language-dropdown" class="z-10 hidden bg-transparent md:w-24 lg:w-28 xl:w-32">
                         <ul class="space-y-1 text-sm text-gray-700" aria-labelledby="language-dropdown-button">
                             <li>
                                 <form action="/change-language" method="post" class="w-full">
                                     <input type="hidden" name="lang" value="en">
-                                    <button type="submit" class="block w-full px-4 py-2 bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-theme focus:ring-offset-2">
+                                    <button type="submit" class="block w-full px-4 py-2 bg-white hover:bg-[#DAE4FF] focus:outline-none focus:ring-2 focus:ring-theme focus:ring-offset-2">
                                         <span class="sr-only">English Language</span>
-                                        <img class="w-[30px] h-[20px] lg:w-[48px] lg:h-[36px]"
+                                        <img class="w-[30px] h-[20px] xl:w-[48px] xl:h-[36px]"
                                             src="/images/US.png"
                                             alt="US Flag"
                                             width="48"
@@ -122,9 +122,9 @@
                             <li>
                                 <form action="/change-language" method="post" class="w-full">
                                     <input type="hidden" name="lang" value="mm">
-                                    <button type="submit" class="block w-full px-4 py-2 bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-theme focus:ring-offset-2">
+                                    <button type="submit" class="block w-full px-4 py-2 bg-white hover:bg-[#DAE4FF] focus:outline-none focus:ring-2 focus:ring-theme focus:ring-offset-2">
                                         <span class="sr-only">Burmese Language</span>
-                                        <img class="w-[30px] h-[20px] lg:w-[48px] lg:h-[36px]"
+                                        <img class="w-[30px] h-[20px] xl:w-[48px] xl:h-[36px]"
                                             src="/images/MM.png"
                                             alt="MM Flag"
                                             width="48"
@@ -200,7 +200,7 @@
                             <li>
                                 <form action="/change-language" method="post" class="w-full">
                                     <input type="hidden" name="lang" value="en">
-                                    <button type="submit" class="flex items-center w-full gap-2 px-4 py-2 bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-theme focus:ring-offset-2">
+                                    <button type="submit" class="flex items-center w-full gap-2 px-4 py-2 bg-white hover:bg-[#DAE4FF] focus:outline-none focus:ring-2 focus:ring-theme focus:ring-offset-2">
                                         <img class="w-[30px] h-[20px] lg:w-[48px] lg:h-[36px]"
                                             src="/images/US.png"
                                             alt="US Flag"
@@ -215,7 +215,7 @@
                             <li>
                                 <form action="/change-language" method="post" class="w-full">
                                     <input type="hidden" name="lang" value="mm">
-                                    <button type="submit" class="flex items-center w-full gap-2 px-4 py-2 bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-theme focus:ring-offset-2">
+                                    <button type="submit" class="flex items-center w-full gap-2 px-4 py-2 bg-white hover:bg-[#DAE4FF] focus:outline-none focus:ring-2 focus:ring-theme focus:ring-offset-2">
                                         <img class="w-[30px] h-[20px] lg:w-[48px] lg:h-[36px]"
                                             src="/images/MM.png"
                                             alt="MM Flag"
