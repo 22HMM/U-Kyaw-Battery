@@ -53,7 +53,7 @@ $currentProducts = $currentCategory ? getProductsByCategoryId($currentCategory['
                 <?php endforeach; ?>
             </ul>
         </aside>
-        <main class="space-y-8 lg:col-span-4" role="main" aria-labelledby="products-heading">
+        <main class="space-y-8 lg:col-span-4" role="main" aria-labelledby="products-heading-sr">
             <article class="space-y-4" itemscope itemtype="https://schema.org/CollectionPage">
                 <header>
                     <img
@@ -65,7 +65,7 @@ $currentProducts = $currentCategory ? getProductsByCategoryId($currentCategory['
                         title="<?= htmlspecialchars($currentCategory['name']); ?>"
                         loading="eager"
                         itemprop="image" />
-                    <h2 id="products-heading" class="sr-only" itemprop="name">
+                    <h2 id="products-heading-sr" class="sr-only" itemprop="name">
                         <?= htmlspecialchars($currentCategory['name']); ?>
                     </h2>
                 </header>
