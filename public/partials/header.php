@@ -69,6 +69,7 @@ $isContact = $currentPath === '/contact-us';
                     <path class="hamburger line-3" d="M6.25 22.5C5.55965 22.5 5 23.0597 5 23.75C5 24.4404 5.55965 25 6.25 25H33.75C34.4403 25 35 24.4404 35 23.75C35 23.0597 34.4403 22.5 33.75 22.5H6.25Z" fill="black" />
                     <path class="hamburger line-4" d="M6.25 29.5C5.55965 29.5 5 30.0597 5 30.75C5 31.4404 5.55965 32 6.25 32H33.75C34.4403 32 35 31.4404 35 30.75C35 30.0597 34.4403 29.5 33.75 29.5H6.25Z" fill="black" />
                 </svg>
+                <span class="sr-only">Toggle Button</span>
             </button>
 
 
