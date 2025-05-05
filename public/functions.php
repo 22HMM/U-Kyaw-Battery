@@ -112,6 +112,16 @@ function getData(): array
 }
 
 /** 
+ * Get all services
+ * 
+ * @return array 
+ */
+function getServices(): array
+{
+    return getData()['services'];
+}
+
+/** 
  * Get all categories
  * 
  * @return array 

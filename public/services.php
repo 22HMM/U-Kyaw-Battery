@@ -23,20 +23,7 @@
 
 <!-- Services -->
 <?php
-$services = [
-    [
-        'key' => 'service_1',
-        'image' => '/images/service-1.png',
-    ],
-    [
-        'key' => 'service_2',
-        'image' => '/images/service-2.png',
-    ],
-    [
-        'key' => 'service_3',
-        'image' => '/images/service-3.png',
-    ],
-];
+$services = getServices();
 ?>
 <section class="py-[60px] md:py-[80px] theme-container space-y-[40px] md:space-y-[80px]">
     <?php foreach ($services as $service): ?>
@@ -58,9 +45,9 @@ $services = [
                 <h3 class="capitalize heading-3"><?= __("services.services.{$service['key']}.title"); ?></h3>
                 <p class="content-text text-justify text-[#3E3D3D]"><?= __("services.services.{$service['key']}.description"); ?></p>
                 <div>
-                    <a href="/contact-us" class="text-[#1F1F1F] inline-flex items-center gap-3 p-3 capitalize focus:outline-none focus:text-[#0C40C5] focus-visible:ring-2 focus-visible:ring-[#0C40C5] focus-visible:ring-offset-2 hover:text-[#0C40C5] group">
+                    <a href="/contact-us" class="text-[#1F1F1F] btn-contact group">
                         <span class="font-semibold group-hover:underline underline-offset-4 content-text"><?= __('contact.title') ?></span>
-                        <svg class="w-6 h-6 transition-transform duration-300 ease-linear shrink-0 group-hover:transform group-hover:translate-x-1 group-focus:translate-x-1 group-hover:text-[#0C40C5] group-focus:text-[#0C40C5]"
+                        <svg class="btn-contact__icon group-hover:transform group-hover:translate-x-1 group-focus:translate-x-1 group-hover:text-[#0C40C5] group-focus:text-[#0C40C5]"
                             aria-hidden="true"
                             focusable="false"
                             width="25"

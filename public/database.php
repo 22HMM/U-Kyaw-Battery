@@ -5,8 +5,23 @@
  */
 
 return [
-    /** Data for products page */
+    /** Data for services page */
+    "services"   => [
+        [
+            'key' => 'service_1',
+            'image' => '/images/service-1.png',
+        ],
+        [
+            'key' => 'service_2',
+            'image' => '/images/service-2.png',
+        ],
+        [
+            'key' => 'service_3',
+            'image' => '/images/service-3.png',
+        ],
+    ],
 
+    /** Data for products page */
     // NOTE: I won't use these descriptions for the translation purposes :3
     "categories" => [
         [
