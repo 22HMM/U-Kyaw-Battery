@@ -1,9 +1,9 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-    # Ensure the 'public' folder is set as the base directory
+    # Ensure index.php handles all requests
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ /public/$1 [L]
+    RewriteRule ^ index.php [L]
 
 </IfModule>
