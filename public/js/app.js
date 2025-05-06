@@ -9988,6 +9988,25 @@ __webpack_require__.r(__webpack_exports__);
 
 var DOC = document;
 DOC.addEventListener('DOMContentLoaded', function () {
+  /** Set flag for the aria expanded to the mobile view toggle button */
+  // const toggleButton = this.querySelector('#toggle-button');
+  // if (toggleButton) {
+  //     toggleButton.addEventListener('click', function () {
+  //         const isExpanded = this.getAttribute('aria-expanded') === 'true';
+  //         this.setAttribute('aria-expanded', String(!isExpanded));
+  //     });
+  // }
+
+  // const closeMenu = this.querySelector('#close-menu');
+  // if (closeMenu && toggleButton) {
+  //     closeMenu.addEventListener('click', function () {
+  //         toggleButton.setAttribute('aria-expanded', 'false');
+  //     });
+  // }
+
+  /**
+   * Contact Form submitting loading function!
+   */
   var contactForm = this.querySelector('#contact-form');
   var contactSubmitButton = this.querySelector('#contact-submit-button');
   if (!contactForm) return;

@@ -72,9 +72,9 @@
                             <a href="mailto:kyawbattery664@gmail.com" class="focus:outline-none focus:text-theme focus-visible:ring-2 focus-visible:ring-theme focus-visible:ring-offset-2">kyawbattery664@gmail.com</a>
                         </li>
                         <li class="inline-block">
-                            <a aria-current="<?= $isContact ? 'page' : '' ?>" href="/contact-us" class="btn-contact !p-0 group">
+                            <a aria-current="<?= $isContact ? 'page' : '' ?>" href="/contact-us" class="btn-arrow !p-0 group">
                                 <span class="group-hover:font-medium group-hover:underline underline-offset-4 content-text text-[#6E6D6E] group-hover:text-[#0C40C5]"><?= __('footer.message_us') ?></span>
-                                <svg class="text-[#6E6D6E] btn-contact__icon group-hover:transform group-hover:translate-x-1 group-focus:translate-x-1 group-hover:text-[#0C40C5] group-focus:text-[#0C40C5]"
+                                <svg class="text-[#6E6D6E] btn-arrow__icon group-hover:transform group-hover:translate-x-1 group-focus:translate-x-1 group-hover:text-[#0C40C5] group-focus:text-[#0C40C5]"
                                     aria-hidden="true"
                                     focusable="false"
                                     width="25"

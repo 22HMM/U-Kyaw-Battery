@@ -17,10 +17,23 @@ return [
         'message_us' => 'Message Us',
         'follow_us' => 'Follow Us',
     ],
+    'home'     => [
+        'testimonial' => [
+            'title'         => 'Their team is dedicated to delivering top-notch solutions, ensuring customer satisfaction at every step.',
+            'description'   => 'Working with U Kyaw Battery has been an exceptional experience. Their commitment to quality, reliability, and innovation in the battery industry sets them apart. Their team is dedicated to delivering top-notch solutions, ensuring customer satisfaction at every step. We highly recommend U Kyaw Battery for anyone looking for durable and high-performance battery solutions.',
+        ],
+        'buy_battery' => [
+            'title'         => 'Buy Battery Online',
+            'description'   => 'Browse our wide selection of high-quality batteries for all you needs.',
+            'buy_now'       => 'Buy Now',
+            'read_details'  => 'Read Details',
+        ],
+    ],
     'products' => [
         'title' => 'Products',
         'subtitle' => 'Top International Brands',
         'description' => 'We offer batteries from top international brands which are sourced from trusted manufacturers to ensure high quality and performance.',
+        'home_title'  => 'Our Products',
         'categories' => [
             1 => 'UPLUS is a leading automotive battery manufacturer with advanced production facilities in India and Malaysia. The company offers a range of maintenance-free car batteries utilizing Pb-Ca alloy grids, known for superior starting ability, long lifespan, excellent charging acceptance, and reliable performance in low temperatures. These batteries are suitable for passenger cars, commercial vehicles, tractors, and construction machinery.(uplusbattery.com)',
             2 => 'SCOPE is a prominent battery brand based in the United Arab Emirates, specializing in high-quality batteries designed for various applications. Their products are engineered to deliver reliable performance and longevity, catering to the needs of diverse sectors.',
@@ -35,6 +48,8 @@ return [
         'title' => 'Services',
         'subtitle' => 'One-Stop Shop for All Battery Needs',
         'description' => 'At U Kyaw Battery, we provide a variety of services to meet your battery needs',
+        'home_title'  => 'Our Services',
+        'view_details' => 'View Details',
         'services'    => [
             'service_1' => [
                 'title' => 'Battery Installation & Maintenance',
@@ -62,7 +77,8 @@ return [
         'nation_wide' => 'Nationwide',
         'trusted_by'  => 'Trusted by',
         'authorized'  => 'Authorized',
-        'distributor' => 'Distributor'
+        'distributor' => 'Distributor',
+        'read_more'   => 'Read More',
     ],
     'contact' => [
         'title' => 'Contact Us',
