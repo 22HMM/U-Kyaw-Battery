@@ -17,6 +17,7 @@
                 width="917"
                 height="685"
                 title="Banner Image of Contact Us Page"
+                fetchpriority="high"
                 loading="eager" />
         </figure>
     </div>
