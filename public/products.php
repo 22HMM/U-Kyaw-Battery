@@ -1,6 +1,6 @@
 <?php include_once __DIR__ . '/partials/header.php'; ?>
 <!-- Banner -->
-<section class="bg-[#FFFCFF] mt-[60px] lg:mt-[70px] xl:mt-[90px]">
+<header class="bg-[#FFFCFF] mt-[60px] lg:mt-[70px] xl:mt-[90px]">
     <div class="relative grid theme-container md:grid-cols-3">
         <div class="hidden md:block"></div>
         <article class="absolute z-10 flex flex-col w-full max-w-[250px] xs:max-w-[350px] sm:max-w-xl lg:max-w-2xl leading-[120%] gap-6 px-2 transform -translate-y-1/2 md:px-6 left-4 sm:left-6 top-1/2 bg-[#FFFCFF] py-6 sm:py-12 md:py-16 lg:py-24">
@@ -16,10 +16,11 @@
                 width="917"
                 height="685"
                 title="Banner Image of Products Page"
+                fetchpriority="high"
                 loading="eager" />
         </figure>
     </div>
-</section>
+</header>
 
 <!-- Products -->
 <?php
@@ -64,6 +65,7 @@ $currentProducts = $currentCategory ? getProductsByCategoryId($currentCategory['
                         height="41"
                         title="<?= htmlspecialchars($currentCategory['name']); ?>"
                         loading="eager"
+                        fetchpriority="high"
                         itemprop="image" />
                     <h2 id="products-heading-sr" class="sr-only" itemprop="name">
                         <?= htmlspecialchars($currentCategory['name']); ?>
@@ -93,13 +95,13 @@ $currentProducts = $currentCategory ? getProductsByCategoryId($currentCategory['
                         <div class="space-y-2">
                             <h3 class="heading-3 text-[#020B22]" itemprop="name">Battery <?= $i ?></h3>
                             <p class="content-text text-[#3E3D3D]" itemprop="description">Battery model and specification</p>
-                            <a href="/contact-us" class="btn-contact group" aria-label="Contact us about Battery <?= $i ?>">
+                            <a href="/contact-us" class="btn-arrow group" aria-label="Contact us about Battery <?= $i ?>">
                                 <span class="font-semibold group-hover:underline underline-offset-4 content-text">
                                     <?= __('contact.title') ?>
                                 </span>
                                 <svg
                                     aria-hidden="true"
-                                    class="btn-contact__icon group-hover:text-[#0C40C5] group-focus:text-[#0C40C5] group-hover:animate-phoneRing group-focus:animate-phoneRing"
+                                    class="btn-arrow__icon group-hover:text-[#0C40C5] group-focus:text-[#0C40C5] group-hover:animate-phoneRing group-focus:animate-phoneRing"
                                     width="24"
                                     height="25"
                                     viewBox="0 0 24 25"
