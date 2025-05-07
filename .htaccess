@@ -1,10 +1,4 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
-
-    # Skip existing files/directories
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-
-    # Forward everything to public/index.php
     RewriteRule ^(.*)$ public/$1 [L]
 </IfModule>

@@ -1,18 +1,13 @@
 <IfModule mod_rewrite.c>
-    <IfModule mod_negotiation.c>
-        Options -MultiViews -Indexes
-    </IfModule>
-
     RewriteEngine On
 
-    # Redirect Trailing Slashes If Not A Folder...
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_URI} (.+)/$
-    RewriteRule ^ %1 [L,R=301]
-
-    # Send requests to front controller
-    RewriteCond %{REQUEST_FILENAME} !-d
+    # Only rewrite if the request is NOT a file or folder
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ index.php [L]
+    RewriteCond %{REQUEST_FILENAME} !-d
 
+    # Route to public/index.php
+    RewriteRule ^(.*)$ index.php [L]
+    
+    # Route all requests to index.php
+    # RewriteRule ^ index.php [QSA,L]
 </IfModule>
