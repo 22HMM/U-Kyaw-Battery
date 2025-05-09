@@ -49,8 +49,8 @@ $isContact = $currentPath === '/contact-us';
                     alt="U Kyaw Battery Sales & Services"
                     width="300"
                     height="80"
+                    fetchpriority="high"
                     loading="eager"
-                    title="U Kyaw Battery Sales & Services"
                     class="w-auto h-[40px] xs:h-[45px] md:h-[50px] lg:h-[60px] xl:h-[80px]" />
                 <h1 class="sr-only"><?= env('APP_NAME'); ?></h1>
             </a>
@@ -79,7 +79,8 @@ $isContact = $currentPath === '/contact-us';
             <ul class="items-center hidden space-x-3 text-sm md:text-[12px] lg:text-sm font-normal capitalize transition-all duration-300 ease-in-out md:flex lg:space-x-5">
                 <li>
                     <a href="/" class="nav-link lg:px-4 xl:px-6 px-2 py-[18px] lg:py-[22px] xl:py-8 <?= $isHome ? 'active' : ''; ?>"
-                        <?= $isHome ? 'aria-current="page"' : '' ?>>
+                        <?= $isHome ? 'aria-current="page"' : '' ?>
+                        aria-label="<?= __('navbar.home'); ?>">
                         <?= __('navbar.home'); ?>
                     </a>
                 </li>
@@ -113,21 +114,21 @@ $isContact = $currentPath === '/contact-us';
                         class="text-white border border-[#E9E5E9] rounded focus:outline-none px-2 lg:px-3 py-2.5 text-center inline-flex items-center focus:ring-2 focus:ring-theme focus:ring-offset-2" type="button">
                         <?php if ($_SESSION['lang'] == 'en'): ?>
                             <span class="sr-only">English Language</span>
-                            <img class="w-[30px] h-[20px] xl:w-[48px] xl:h-[36px]"
+                            <img class="w-[38px] h-[28px] xl:w-[48px] xl:h-[36px]"
                                 src="/images/US.png"
                                 alt="US Flag"
                                 width="48"
                                 height="36"
-                                title="US Flag"
+                                fetchpriority="high"
                                 loading="eager" />
                         <?php elseif ($_SESSION['lang'] == 'mm'): ?>
                             <span class="sr-only">Burmese Language</span>
-                            <img class="w-[30px] h-[20px] xl:w-[48px] xl:h-[36px]"
+                            <img class="w-[38px] h-[28px] xl:w-[48px] xl:h-[36px]"
                                 src="/images/MM.png"
                                 alt="MM Flag"
                                 width="48"
                                 height="36"
-                                title="MM Flag"
+                                fetchpriority="high"
                                 loading="eager" />
                         <?php endif; ?>
                         <svg class="w-6 h-6 ms-2 lg:ms-5" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -148,12 +149,12 @@ $isContact = $currentPath === '/contact-us';
                                     <input type="hidden" name="lang" value="en">
                                     <button type="submit" class="block w-full px-4 py-2 bg-white hover:bg-[#DAE4FF] focus:outline-none focus:ring-2 focus:ring-theme focus:ring-offset-2">
                                         <span class="sr-only">English Language</span>
-                                        <img class="w-[30px] h-[20px] xl:w-[48px] xl:h-[36px]"
+                                        <img class="w-[38px] h-[28px] xl:w-[48px] xl:h-[36px]"
                                             src="/images/US.png"
                                             alt="US Flag"
                                             width="48"
                                             height="36"
-                                            title="US Flag"
+                                            fetchpriority="high"
                                             loading="eager" />
                                     </button>
                                 </form>
@@ -163,12 +164,12 @@ $isContact = $currentPath === '/contact-us';
                                     <input type="hidden" name="lang" value="mm">
                                     <button type="submit" class="block w-full px-4 py-2 bg-white hover:bg-[#DAE4FF] focus:outline-none focus:ring-2 focus:ring-theme focus:ring-offset-2">
                                         <span class="sr-only">Burmese Language</span>
-                                        <img class="w-[30px] h-[20px] xl:w-[48px] xl:h-[36px]"
+                                        <img class="w-[38px] h-[28px] xl:w-[48px] xl:h-[36px]"
                                             src="/images/MM.png"
                                             alt="MM Flag"
                                             width="48"
                                             height="36"
-                                            title="MM Flag"
+                                            fetchpriority="high"
                                             loading="eager" />
                                     </button>
                                 </form>
@@ -227,23 +228,23 @@ $isContact = $currentPath === '/contact-us';
                         class="border border-[#E9E5E9] rounded focus:outline-none px-2 lg:px-3 py-2.5 text-center inline-flex items-center w-full justify-between focus:ring-2 focus:ring-theme focus:ring-offset-2" type="button">
                         <?php if ($_SESSION['lang'] == 'en'): ?>
                             <div class="flex items-center gap-2">
-                                <img class="w-[30px] h-[20px] lg:w-[48px] lg:h-[36px]"
+                                <img class="w-[38px] h-[28px] lg:w-[48px] lg:h-[36px]"
                                     src="/images/US.png"
                                     alt="US Flag"
                                     width="48"
                                     height="36"
-                                    title="US Flag"
+                                    fetchpriority="high"
                                     loading="eager" />
                                 <span>English</span>
                             </div>
                         <?php elseif ($_SESSION['lang'] == 'mm'): ?>
                             <div class="flex items-center gap-2">
-                                <img class="w-[30px] h-[20px] lg:w-[48px] lg:h-[36px]"
+                                <img class="w-[38px] h-[28px] lg:w-[48px] lg:h-[36px]"
                                     src="/images/MM.png"
                                     alt="MM Flag"
                                     width="48"
                                     height="36"
-                                    title="MM Flag"
+                                    fetchpriority="high"
                                     loading="eager" />
                                 <span>Burmese</span>
                             </div>
@@ -261,31 +262,31 @@ $isContact = $currentPath === '/contact-us';
                     <!-- Dropdown menu -->
                     <div id="language-dropdown-sm" class="z-10 hidden w-full bg-transparent theme-container" role="menu" aria-orientation="vertical" aria-labelledby="language-dropdown-button-sm">
                         <ul class="space-y-1 text-sm text-gray-700" aria-labelledby="language-dropdown-button-sm">
-                            <li>
+                            <li role="menuitem">
                                 <form action="/change-language" method="post" class="w-full">
                                     <input type="hidden" name="lang" value="en">
                                     <button type="submit" class="flex items-center w-full gap-2 px-4 py-2 bg-white hover:bg-[#DAE4FF] focus:outline-none focus:ring-2 focus:ring-theme focus:ring-offset-2">
-                                        <img class="w-[30px] h-[20px] lg:w-[48px] lg:h-[36px]"
+                                        <img class="w-[38px] h-[28px] lg:w-[48px] lg:h-[36px]"
                                             src="/images/US.png"
                                             alt="US Flag"
                                             width="48"
                                             height="36"
-                                            title="US Flag"
+                                            fetchpriority="high"
                                             loading="eager" />
                                         <span>English</span>
                                     </button>
                                 </form>
                             </li>
-                            <li>
+                            <li role="menuitem">
                                 <form action="/change-language" method="post" class="w-full">
                                     <input type="hidden" name="lang" value="mm">
                                     <button type="submit" class="flex items-center w-full gap-2 px-4 py-2 bg-white hover:bg-[#DAE4FF] focus:outline-none focus:ring-2 focus:ring-theme focus:ring-offset-2">
-                                        <img class="w-[30px] h-[20px] lg:w-[48px] lg:h-[36px]"
+                                        <img class="w-[38px] h-[28px] lg:w-[48px] lg:h-[36px]"
                                             src="/images/MM.png"
                                             alt="MM Flag"
                                             width="48"
                                             height="36"
-                                            title="MM Flag"
+                                            fetchpriority="high"
                                             loading="eager" />
                                         <span>Burmese</span>
                                     </button>

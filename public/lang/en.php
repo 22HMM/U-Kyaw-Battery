@@ -18,6 +18,18 @@ return [
         'follow_us' => 'Follow Us',
     ],
     'home'     => [
+        'hero' => [
+            'reliable'      => 'Reliable',
+            'high_quality'  => 'High Quality',
+            'after_sale'    => 'Best After-Sale Service',
+            'welcome'       => 'Welcome from U Kyaw Battery',
+            'description'   => 'We offer a wide range of batteries for homes, businesses, and vehicles. With over 20 years of experience, U Kyaw Battery ensures that you get the best products at competitive prices, with a focus on customer satisfaction.',
+            'trusted_customers' => 'Trusted by 50k+ customers',
+            'shop'          => 'Shop',
+            'now'           => 'Now',
+            'contact_us'    => 'Contact Us',
+            'get_battery'   => 'Get Your Battery Today ⚡'
+        ],
         'testimonial' => [
             'title'         => 'Their team is dedicated to delivering top-notch solutions, ensuring customer satisfaction at every step.',
             'description'   => 'Working with U Kyaw Battery has been an exceptional experience. Their commitment to quality, reliability, and innovation in the battery industry sets them apart. Their team is dedicated to delivering top-notch solutions, ensuring customer satisfaction at every step. We highly recommend U Kyaw Battery for anyone looking for durable and high-performance battery solutions.',

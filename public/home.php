@@ -1,10 +1,95 @@
 <?php include_once __DIR__ . '/partials/header.php'; ?>
 
 <!-- Hero Section -->
-<header class="bg-[#FFFCFF] mt-[60px] lg:mt-[70px] xl:mt-[90px]">
+<header class="bg-[#FFFCFF] mt-[60px] lg:mt-[70px] xl:mt-[90px] max-w-[2560px] 2xl:max-w-[1563px] mx-auto">
+    <div class="relative flex flex-col-reverse 2xl:mx-6 gap-y-6">
+        <!-- Hero Content -->
+        <article class="hero-content flex flex-col justify-center space-y-6 theme-container relative md:absolute left-0 z-30 h-[calc(100%+4px)] w-full md:w-[60%] bg-[#FFFCFF] md:-m-1 xl:-m-px">
+            <header class="md:max-w-[75%] space-y-2">
+                <div class="flex flex-wrap items-center gap-4 capitalize md:gap-x-8 md:gap-y-4 text-secondary content-text">
+                    <strong class="font-medium"><?= __('home.hero.reliable'); ?></strong>၊
+                    <strong class="font-medium"><?= __('home.hero.high_quality'); ?></strong>၊
+                    <strong class="font-medium"><?= __('home.hero.after_sale'); ?></strong>
+                </div>
+                <h2 class="banner-title lg:!leading-[120%]"><?= __('home.hero.welcome'); ?></h2>
+            </header>
+            <div class="md:max-w-[75%] space-y-6">
+                <p class="text-justify content-text text-[#3E3D3D]"><?= __('home.hero.description'); ?></p>
+                <div class="flex flex-wrap items-center gap-4">
+                    <div class="w-full sm:w-3/4 max-w-[300px] md:max-w-full">
+                        <a href="/products" class="relative inline-flex w-full overflow-hidden text-white bg-[#FFDB43] btn energy-btn group hover:bg-[#D00416] transition-all ease-in-out">
+                            <!-- Left text -->
+                            <div class="px-2 py-3 left-part text-end">
+                                <span><?= __('home.hero.shop'); ?></span>
+                            </div>
+
+                            <!-- Right text -->
+                            <div class="px-2 py-3 right-part">
+                                <span><?= __('home.hero.now'); ?></span>
+                            </div>
+
+                            <!-- After-hover text -->
+                            <div class="px-8 py-3 w-full text-center bg-[#D00416] transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
+                                <span class="text-nowrap"><?= __('home.hero.get_battery'); ?></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/contact-us" class="text-[#1F1F1F] btn px-8 py-3 border border-[#1F1F1F]"><?= __('home.hero.contact_us'); ?></a>
+                    </div>
+                </div>
+                <span class="inline-block content-text text-[#020B22]"><?= __('home.hero.trusted_customers'); ?></span>
+            </div>
+        </article>
+        <!-- Carousel -->
+        <div id="controls-carousel" class="relative w-full h-[40vh] md:h-[70vh] lg:h-[65vh] xl:h-[70vh] overflow-hidden" data-carousel="slide">
+            <!-- Carousel wrapper -->
+            <div class="relative z-0 w-full h-full overflow-hidden">
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                    <img src="/images/carousel-image-1.png" class="absolute block object-cover w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                        alt="Carousel Image 1"
+                        width="1512"
+                        height="685"
+                        title="Carousel Image 1"
+                        loading="eager"
+                        fetchpriority="high" />
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="/images/carousel-image-2.png" class="absolute block object-cover w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                        alt="Carousel Image 2"
+                        width="1512"
+                        height="685"
+                        title="Carousel Image 2"
+                        loading="eager"
+                        fetchpriority="high" />
+                </div>
+            </div>
+            <!-- Slider controls -->
+            <div class="absolute right-0 z-30 space-y-4 -translate-y-1/2 2xl:right-6 top-1/2">
+                <button type="button" class="flex items-center justify-center px-4 cursor-pointer end-0 group focus:outline-none" data-carousel-next>
+                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-16 md:h-16 bg-[#2D349540] group-hover:bg-[#2D349580] group-focus:ring-4 group-focus:ring-theme">
+                        <svg class="w-4 h-4 text-white rtl:rotate-180 md:w-10 md:h-10 " aria-hidden="true" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 24H40M40 24L28 12M40 24L28 36" stroke="#FFFCFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span class="sr-only">Next</span>
+                    </span>
+                </button>
+                <button type="button" class="flex items-center justify-center px-4 cursor-pointer start-0 group focus:outline-none" data-carousel-prev>
+                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-16 md:h-16 bg-[#2D349540] group-hover:bg-[#2D349580] group-focus:ring-4 group-focus:ring-theme">
+                        <svg class="w-4 h-4 text-white rotate-180 md:w-10 md:h-10" aria-hidden="true" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 24H40M40 24L28 12M40 24L28 36" stroke="#FFFCFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span class="sr-only">Previous</span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
 </header>
 
-<!-- Products Section -->
+<!-- Categories Section -->
 <section class="relative py-[60px] md:pt-[80px] md:pb-[160px] theme-container" aria-labelledby="products-title">
     <div class="space-y-8 lg:space-y-20 mx-[7%]">
 
@@ -52,7 +137,7 @@
                 $categoryId = 'category-name-' . $index;
                 $categorySlug = slugify($category['name']);
             ?>
-                <a href="/products/<?= $categorySlug; ?>" class="transition-colors duration-300 bg-[#FFFCFF] ease-in-out border border-[#C2C5ED] rounded-[8px] hover:bg-[#C2C5ED] hover:shadow-[0_2px_15px_0_#0000001A] p-4 w-full xs:w-[calc(50%-20px)] lg:w-[calc(33.333%-20px)]" role="listitem" aria-labelledby="<?= $serviceId; ?>">
+                <a href="/products/<?= $categorySlug; ?>" class="transition-colors duration-300 bg-[#FFFCFF] ease-in-out border border-[#C2C5ED] rounded-[8px] hover:bg-[#C2C5ED] hover:shadow-[0_2px_15px_0_#0000001A] p-4 w-full xs:w-[calc(50%-20px)] lg:w-[calc(33.333%-20px)]" role="listitem" aria-labelledby="<?= $categoryId; ?>">
                     <article class="space-y-6" itemscope itemtype="https://schema.org/CollectionPage">
                         <header>
                             <img
@@ -64,7 +149,7 @@
                                 title="<?= htmlspecialchars($category['name']); ?>"
                                 loading="eager"
                                 itemprop="image" />
-                            <h2 id="products-heading-sr" class="sr-only" itemprop="name">
+                            <h2 id="category-name-<?= $index ?>" class="sr-only" itemprop="name">
                                 <?= htmlspecialchars($category['name']); ?>
                             </h2>
                         </header>
@@ -79,23 +164,23 @@
 </section>
 
 <!-- About Section -->
-<section class="relative py-[60px] md:py-[80px]" aria-labelledby="about-title">
-    <div class="grid gap-12 theme-container md:grid-cols-2 md:gap-8 lg:gap-16">
+<section class="relative py-[60px] md:py-[80px] max-w-[2560px] 2xl:max-w-[1563px] mx-auto" aria-labelledby="about-title">
+    <div class="grid gap-12 md:grid-cols-2 md:gap-8 lg:gap-16 2xl:mx-6">
         <!-- Image with Caption -->
         <figure class="overflow-hidden aspect-w-3 aspect-h-2">
             <img
                 class="object-cover object-center w-full h-full select-none"
                 src="/images/home-about-us-image.webp"
-                alt="<?= __('about.image_alt', 'About U Kyaw Battery'); ?>"
+                alt="About U Kyaw Battery"
                 width="400"
                 height="300"
-                title="<?= __('about.image_title', 'About U Kyaw Battery'); ?>"
+                title="About U Kyaw Battery"
                 loading="lazy" />
             <figcaption class="sr-only">About U Kyaw Battery</figcaption>
         </figure>
 
         <!-- About Content -->
-        <article class="space-y-6 md:space-y-8 lg:space-y-12">
+        <article class="space-y-6 md:space-y-8 lg:space-y-12 theme-container md:!ps-0">
             <header class="space-y-6">
                 <h2 id="about-title" class="flex items-center justify-start space-x-4">
                     <svg class="w-6 h-6 shrink-0" aria-hidden="true" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -129,7 +214,7 @@
                     <?= __('about.subtitle'); ?>
                 </p>
             </header>
-            <p class="content-text"><?= __('home.testimonial.description'); ?></p>
+            <p class="text-justify content-text"><?= __('home.testimonial.description'); ?></p>
             <?php
             $stats = [
                 ['value' => __('about.years'), 'label' => __('about.experience')],
@@ -148,7 +233,7 @@
 
             <!-- CTA Button -->
             <nav class="text-center xs:text-start" aria-label="Call to Action">
-                <a href="/contact-us" class="btn text-white border border-[#0E4DED] bg-[#0E4DED] hover:bg-[#0C40C5] hover:border-[#0C40C5]">
+                <a href="/contact-us" class="btn px-8 py-3 text-white border border-[#0E4DED] bg-[#0E4DED] hover:bg-[#0C40C5] hover:border-[#0C40C5]">
                     <?= __('about.read_more'); ?>
                 </a>
             </nav>
@@ -218,7 +303,7 @@
 
                     <!-- Content -->
                     <article class="inline-flex flex-col gap-6">
-                        <h3 class="capitalize heading-3 line-clamp-1 lg:!leading-[180%]"><?= __("services.services.{$service['key']}.title"); ?></h3>
+                        <h3 id="service-name-<?= $index; ?>" class="capitalize heading-3 line-clamp-1 lg:!leading-[180%]"><?= __("services.services.{$service['key']}.title"); ?></h3>
                         <p class="content-text text-justify text-[#3E3D3D] line-clamp-3"><?= __("services.services.{$service['key']}.description"); ?></p>
                         <div>
                             <a href="/services" class="text-[#1F1F1F] btn-arrow group">
@@ -267,10 +352,10 @@
                     </p>
                 </header>
                 <nav class="flex flex-wrap items-center gap-4" aria-label="Buy Battery Actions">
-                    <a href="/contact-us" class="bg-white border border-white btn text-[#0C40C5] hover:bg-[#AEC3FA] hover:border-[#AEC3FA]">
+                    <a href="/contact-us" class="bg-white border border-white btn px-8 py-3 text-[#0C40C5] hover:bg-[#AEC3FA] hover:border-[#AEC3FA]">
                         <?= __('home.buy_battery.buy_now'); ?>
                     </a>
-                    <a href="/services" class="text-white bg-transparent border border-white btn hover:border-[#3E3D3D] hover:text-[#3E3D3D]">
+                    <a href="/services" class="text-white bg-transparent border border-white btn px-8 py-3 hover:border-[#3E3D3D] hover:text-[#3E3D3D]">
                         <?= __('home.buy_battery.read_details'); ?>
                     </a>
                 </nav>

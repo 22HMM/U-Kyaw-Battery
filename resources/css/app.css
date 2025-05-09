@@ -19,6 +19,10 @@
 
 /* Components */
 @layer components {
+  .sr-only {
+    @apply text-black bg-white;
+  }
+
   .theme-container {
     @apply w-full px-4 mx-auto max-w-screen-2xl sm:px-6 lg:px-16 2xl:px-2;
   }
@@ -53,8 +57,80 @@
   }
 
   .btn {
-    @apply px-8 py-3 text-sm font-semibold transition-colors duration-500 ease-in-out rounded-full md:text-base;
+    @apply text-sm font-semibold transition-colors duration-500 ease-in-out rounded-full md:text-base;
     @apply focus:outline-none focus-visible:ring-4 focus-visible:ring-secondary focus-visible:ring-offset-4;
+  }
+
+  .left-part,
+  .right-part {
+    @apply absolute top-0 h-full w-[50.6%] bg-[#0E4DED] transition-transform duration-100 ease-linear;
+    content: "";
+    z-index: 0;
+  }
+
+  .left-part {
+    /* left: 2%; */
+    left: 0;
+    transform: translateX(0);
+    clip-path: polygon(0 0, 98% 0, 100% 25%, 98% 35%, 100% 100%, 0 100%);
+  }
+
+  .right-part {
+    /* right: 2%; */
+    right: 0;
+    transform: translateX(0);
+    clip-path: polygon(0 0, 2% 25%, 0 35%, 2% 100%, 100% 100%, 100% 0);
+  }
+
+  .energy-btn:hover .left-part {
+    transform: translateX(-100%);
+  }
+
+  .energy-btn:hover .right-part {
+    transform: translateX(100%);
+  }
+
+  .energy-btn:not(:hover) .left-part,
+  .energy-btn:not(:hover) .right-part {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @keyframes bounce-left-back {
+    0% {
+      transform: translateX(-100%);
+    }
+    60% {
+      transform: translateX(0%);
+    }
+    80% {
+      transform: translateX(-10%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes bounce-right-back {
+    0% {
+      transform: translateX(100%);
+    }
+    60% {
+      transform: translateX(0%);
+    }
+    80% {
+      transform: translateX(10%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  .bounce-left-back {
+    animation: bounce-left-back 0.6s ease-out forwards;
+  }
+
+  .bounce-right-back {
+    animation: bounce-right-back 0.6s ease-out forwards;
   }
 
   .tab {
@@ -120,4 +196,10 @@ h4,
 h5,
 h6 {
   @apply font-ibm-plex-sans;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-content {
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+  }
 }

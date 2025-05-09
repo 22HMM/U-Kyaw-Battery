@@ -5,20 +5,49 @@ const DOC = document;
 DOC.addEventListener('DOMContentLoaded', function () {
 
     /** Set flag for the aria expanded to the mobile view toggle button */
-    // const toggleButton = this.querySelector('#toggle-button');
-    // if (toggleButton) {
-    //     toggleButton.addEventListener('click', function () {
-    //         const isExpanded = this.getAttribute('aria-expanded') === 'true';
-    //         this.setAttribute('aria-expanded', String(!isExpanded));
-    //     });
-    // }
+    const toggleButton = this.querySelector('#toggle-button');
+    if (toggleButton) {
+        toggleButton.addEventListener('click', function () {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', String(!isExpanded));
+        });
+    }
 
-    // const closeMenu = this.querySelector('#close-menu');
-    // if (closeMenu && toggleButton) {
-    //     closeMenu.addEventListener('click', function () {
-    //         toggleButton.setAttribute('aria-expanded', 'false');
-    //     });
-    // }
+    const closeMenu = this.querySelector('#close-menu');
+    if (closeMenu && toggleButton) {
+        closeMenu.addEventListener('click', function () {
+            toggleButton.setAttribute('aria-expanded', 'false');
+        });
+    }
+
+    /**
+     * Bounce animation for hero section call to action.
+     */
+    const energyBtn = document.querySelector('.energy-btn');
+    const leftPart = energyBtn.querySelector('.left-part');
+    const rightPart = energyBtn.querySelector('.right-part');
+
+    energyBtn.addEventListener('mouseleave', () => {
+        leftPart.classList.remove('hovered');
+        rightPart.classList.remove('hovered');
+
+        leftPart.classList.add('bounce-left-back');
+        rightPart.classList.add('bounce-right-back');
+
+        setTimeout(() => {
+            leftPart.classList.remove('bounce-left-back');
+            rightPart.classList.remove('bounce-right-back');
+        }, 600);
+    });
+
+    energyBtn.addEventListener('mouseenter', () => {
+        leftPart.classList.add('hovered');
+        rightPart.classList.add('hovered');
+
+        leftPart.classList.remove('bounce-left-back');
+        rightPart.classList.remove('bounce-right-back');
+    });
+
 
     /**
      * Contact Form submitting loading function!
