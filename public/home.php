@@ -47,7 +47,7 @@
             <div class="relative z-0 w-full h-full overflow-hidden">
                 <!-- Item 1 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                    <img src="/images/carousel-image-1.png" class="absolute block object-cover w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    <img src="/images/carousel-image-1.webp" class="absolute block object-cover w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                         alt="Carousel Image 1"
                         width="1512"
                         height="685"
@@ -57,7 +57,7 @@
                 </div>
                 <!-- Item 2 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="/images/carousel-image-2.png" class="absolute block object-cover w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    <img src="/images/carousel-image-2.webp" class="absolute block object-cover w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                         alt="Carousel Image 2"
                         width="1512"
                         height="685"
@@ -170,7 +170,7 @@
         <figure class="overflow-hidden aspect-w-3 aspect-h-2">
             <img
                 class="object-cover object-center w-full h-full select-none"
-                src="/images/home-about-us-image.png"
+                src="/images/home-about-us-image.webp"
                 alt="About U Kyaw Battery"
                 width="400"
                 height="300"
@@ -336,7 +336,7 @@
 <section class="relative py-[60px] md:py-[80px]" aria-labelledby="buy-battery-title">
     <!-- Background Layers -->
     <div class="absolute inset-0 bg-[#0E4DED]/80 z-0" aria-hidden="true"></div>
-    <div class="absolute inset-0 bg-[url('/images/buy-batteries-online-background.png')] bg-cover bg-center bg-no-repeat z-[-1] bg-opacity-20" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-[url('/images/buy-batteries-online-background.webp')] bg-cover bg-center bg-no-repeat z-[-1] bg-opacity-20" aria-hidden="true"></div>
 
     <!-- Content -->
     <div class="relative z-10 grid gap-12 text-white md:grid-cols-2 theme-container">
@@ -366,7 +366,7 @@
         <figure class="flex items-center justify-center">
             <img
                 class="w-[200px] h-[200px] md:w-[300px] md:h-[300px] object-contain"
-                src="/images/mr-battery.png"
+                src="/images/mr-battery.webp"
                 alt="Mr. Battery character illustration"
                 width="300"
                 height="300"
@@ -404,7 +404,7 @@
         <figure class="relative overflow-hidden rounded-[20px]" role="img" aria-label="Testimonial letter from Scope Battery">
             <img
                 class="object-cover object-center w-full h-full select-none"
-                src="/images/testimonial-bg.png"
+                src="/images/testimonial-bg.webp"
                 alt="Testimonial Background"
                 width="400"
                 height="300"

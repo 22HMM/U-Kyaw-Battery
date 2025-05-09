@@ -3,7 +3,7 @@
         <header class="flex items-center justify-center gap-6 mb-6 md:mb-12">
             <img class="object-cover w-12 h-12 select-none"
                 draggable="false"
-                src="/images/footer-logo.png"
+                src="/images/footer-logo.webp"
                 alt="Footer Logo"
                 width="50"
                 height="50"

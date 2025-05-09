@@ -11,7 +11,7 @@
         <figure class="overflow-hidden md:col-span-2 aspect-w-3 aspect-h-3 xs:aspect-h-2">
             <img
                 class="object-cover object-center w-full h-full"
-                src="/images/products-banner.png"
+                src="/images/products-banner.webp"
                 alt="Products Banner"
                 width="917"
                 height="685"
@@ -82,7 +82,7 @@ $currentProducts = $currentCategory ? getProductsByCategoryId($currentCategory['
                         <figure class="overflow-hidden aspect-w-3 aspect-h-2">
                             <img
                                 class="object-cover w-full h-full"
-                                src="/images/product-<?= $i ?>.png"
+                                src="/images/product-<?= $i ?>.webp"
                                 alt="Battery <?= $i ?>"
                                 width="320"
                                 height="256"

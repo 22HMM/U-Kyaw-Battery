@@ -24,7 +24,7 @@ $isContact = $currentPath === '/contact-us';
     <meta name="theme-color" content="#363FB3">
 
     <!-- Favicons for various devices -->
-    <link rel="preload" href="/images/footer-logo.png" as="image">
+    <link rel="preload" href="/images/footer-logo.webp" as="image">
     <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
     <link rel="shortcut icon" href="/favicon/favicon.ico" />
@@ -45,7 +45,7 @@ $isContact = $currentPath === '/contact-us';
 
             <!-- Site Identity -->
             <a href="/" class="flex items-center focus:outline-none focus:opacity-70 focus-visible:ring-2 focus-visible:ring-theme focus-visible:ring-offset-2" aria-label="<?= env('APP_NAME') ?>">
-                <img src="/images/main-logo.png"
+                <img src="/images/main-logo.webp"
                     alt="U Kyaw Battery Sales & Services"
                     width="300"
                     height="80"
@@ -115,7 +115,7 @@ $isContact = $currentPath === '/contact-us';
                         <?php if ($_SESSION['lang'] == 'en'): ?>
                             <span class="sr-only">English Language</span>
                             <img class="w-[38px] h-[28px] xl:w-[48px] xl:h-[36px]"
-                                src="/images/US.png"
+                                src="/images/US.webp"
                                 alt="US Flag"
                                 width="48"
                                 height="36"
@@ -124,7 +124,7 @@ $isContact = $currentPath === '/contact-us';
                         <?php elseif ($_SESSION['lang'] == 'mm'): ?>
                             <span class="sr-only">Burmese Language</span>
                             <img class="w-[38px] h-[28px] xl:w-[48px] xl:h-[36px]"
-                                src="/images/MM.png"
+                                src="/images/MM.webp"
                                 alt="MM Flag"
                                 width="48"
                                 height="36"
@@ -150,7 +150,7 @@ $isContact = $currentPath === '/contact-us';
                                     <button type="submit" class="block w-full px-4 py-2 bg-white hover:bg-[#DAE4FF] focus:outline-none focus:ring-2 focus:ring-theme focus:ring-offset-2">
                                         <span class="sr-only">English Language</span>
                                         <img class="w-[38px] h-[28px] xl:w-[48px] xl:h-[36px]"
-                                            src="/images/US.png"
+                                            src="/images/US.webp"
                                             alt="US Flag"
                                             width="48"
                                             height="36"
@@ -165,7 +165,7 @@ $isContact = $currentPath === '/contact-us';
                                     <button type="submit" class="block w-full px-4 py-2 bg-white hover:bg-[#DAE4FF] focus:outline-none focus:ring-2 focus:ring-theme focus:ring-offset-2">
                                         <span class="sr-only">Burmese Language</span>
                                         <img class="w-[38px] h-[28px] xl:w-[48px] xl:h-[36px]"
-                                            src="/images/MM.png"
+                                            src="/images/MM.webp"
                                             alt="MM Flag"
                                             width="48"
                                             height="36"
@@ -229,7 +229,7 @@ $isContact = $currentPath === '/contact-us';
                         <?php if ($_SESSION['lang'] == 'en'): ?>
                             <div class="flex items-center gap-2">
                                 <img class="w-[38px] h-[28px] lg:w-[48px] lg:h-[36px]"
-                                    src="/images/US.png"
+                                    src="/images/US.webp"
                                     alt="US Flag"
                                     width="48"
                                     height="36"
@@ -240,7 +240,7 @@ $isContact = $currentPath === '/contact-us';
                         <?php elseif ($_SESSION['lang'] == 'mm'): ?>
                             <div class="flex items-center gap-2">
                                 <img class="w-[38px] h-[28px] lg:w-[48px] lg:h-[36px]"
-                                    src="/images/MM.png"
+                                    src="/images/MM.webp"
                                     alt="MM Flag"
                                     width="48"
                                     height="36"
@@ -267,7 +267,7 @@ $isContact = $currentPath === '/contact-us';
                                     <input type="hidden" name="lang" value="en">
                                     <button type="submit" class="flex items-center w-full gap-2 px-4 py-2 bg-white hover:bg-[#DAE4FF] focus:outline-none focus:ring-2 focus:ring-theme focus:ring-offset-2">
                                         <img class="w-[38px] h-[28px] lg:w-[48px] lg:h-[36px]"
-                                            src="/images/US.png"
+                                            src="/images/US.webp"
                                             alt="US Flag"
                                             width="48"
                                             height="36"
@@ -282,7 +282,7 @@ $isContact = $currentPath === '/contact-us';
                                     <input type="hidden" name="lang" value="mm">
                                     <button type="submit" class="flex items-center w-full gap-2 px-4 py-2 bg-white hover:bg-[#DAE4FF] focus:outline-none focus:ring-2 focus:ring-theme focus:ring-offset-2">
                                         <img class="w-[38px] h-[28px] lg:w-[48px] lg:h-[36px]"
-                                            src="/images/MM.png"
+                                            src="/images/MM.webp"
                                             alt="MM Flag"
                                             width="48"
                                             height="36"

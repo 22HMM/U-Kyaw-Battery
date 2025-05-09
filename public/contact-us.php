@@ -12,7 +12,7 @@
         <figure class="overflow-hidden md:col-span-2 aspect-w-3 aspect-h-3 xs:aspect-h-2">
             <img
                 class="object-cover object-center w-full h-full"
-                src="/images/contact-us-banner.png"
+                src="/images/contact-us-banner.webp"
                 alt="Contact Us Banner"
                 width="917"
                 height="685"
@@ -74,7 +74,7 @@
         <figure class="hidden overflow-hidden aspect-w-3 aspect-h-4 md:block">
             <img
                 class="object-cover w-full h-full"
-                src="/images/contact-form.png"
+                src="/images/contact-form.webp"
                 alt="Contact Form Image"
                 width="792"
                 height="1003"
@@ -88,7 +88,7 @@
             <img
                 aria-label="U Kyaw Battery Logo"
                 class="w-12 h-12 md:w-16 md:h-16"
-                src="/images/footer-logo.png"
+                src="/images/footer-logo.webp"
                 alt="U Kyaw Battery Logo"
                 width="64"
                 height="64"

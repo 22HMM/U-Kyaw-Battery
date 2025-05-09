@@ -11,7 +11,7 @@
         <figure class="overflow-hidden md:col-span-2 aspect-w-3 aspect-h-3 xs:aspect-h-2">
             <img
                 class="object-cover object-center w-full h-full"
-                src="/images/services-banner.png"
+                src="/images/services-banner.webp"
                 alt="Services Banner"
                 width="917"
                 height="685"
