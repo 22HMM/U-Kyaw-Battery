@@ -2869,6 +2869,9 @@ input:checked + .toggle-bg {
 .bg-\[url\(\'\/images\/buy-batteries-online-background\.webp\'\)\] {
   background-image: url('/images/buy-batteries-online-background.webp');
 }
+.bg-\[url\(\'\/images\/buy-batteries-online-background\.png\'\)\] {
+  background-image: url('/images/buy-batteries-online-background.png');
+}
 .bg-cover {
   background-size: cover;
 }

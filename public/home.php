@@ -170,7 +170,7 @@
         <figure class="overflow-hidden aspect-w-3 aspect-h-2">
             <img
                 class="object-cover object-center w-full h-full select-none"
-                src="/images/home-about-us-image.webp"
+                src="/images/home-about-us-image.png"
                 alt="About U Kyaw Battery"
                 width="400"
                 height="300"
@@ -336,7 +336,7 @@
 <section class="relative py-[60px] md:py-[80px]" aria-labelledby="buy-battery-title">
     <!-- Background Layers -->
     <div class="absolute inset-0 bg-[#0E4DED]/80 z-0" aria-hidden="true"></div>
-    <div class="absolute inset-0 bg-[url('/images/buy-batteries-online-background.webp')] bg-cover bg-center bg-no-repeat z-[-1] bg-opacity-20" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-[url('/images/buy-batteries-online-background.png')] bg-cover bg-center bg-no-repeat z-[-1] bg-opacity-20" aria-hidden="true"></div>
 
     <!-- Content -->
     <div class="relative z-10 grid gap-12 text-white md:grid-cols-2 theme-container">
