@@ -25,7 +25,7 @@
 
 <!-- Addresses Section -->
 <section class="py-[60px] md:py-[80px] text-[#020B22]">
-    <div class="py-6 md:py-20" style="background-image: url('/images/page-background.jpg'); background-size: cover; background-position:center; background-repeat: no-repeat;">
+    <div class="py-6 md:py-20" style="background-image: url('/images/page-background.webp'); background-size: cover; background-position:center; background-repeat: no-repeat;">
         <div class="theme-container">
             <article class="w-full max-w-2xl mx-auto">
                 <h2 class="mb-8 text-center capitalize heading-2">

@@ -23,7 +23,7 @@
 
 <!-- About Content Section -->
 <section class="py-[60px] md:py-[80px] text-[#020B22]">
-    <div class="py-6 md:py-20" style="background-image: url('/images/page-background.jpg'); background-size: cover; background-position:center; background-repeat: no-repeat;">
+    <div class="py-6 md:py-20" style="background-image: url('/images/page-background.webp'); background-size: cover; background-position:center; background-repeat: no-repeat;">
         <div class="theme-container">
             <article class="w-full mx-auto space-y-8 md:space-y-10 max-w-7xl">
                 <header class="space-y-3">
