@@ -1,4 +1,17 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteRule ^(.*)$ public/$1 [L]
+    
+    # Redirect asset requests to public/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} ^/(css|js|fonts|images|favicon)/ [NC]
+    RewriteRule ^(css|js|fonts|images|favicon)/(.*)$ public/$1/$2 [L]
+    
+
+    # If request is NOT a real file or directory
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Send all traffic to index.php
+    RewriteRule ^ index.php [QSA,L]
 </IfModule>
