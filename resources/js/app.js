@@ -27,6 +27,8 @@ DOC.addEventListener('DOMContentLoaded', function () {
     const leftPart = energyBtn.querySelector('.left-part');
     const rightPart = energyBtn.querySelector('.right-part');
 
+    if (!energyBtn || !leftPart || !rightPart) return;
+
     energyBtn.addEventListener('mouseleave', () => {
         leftPart.classList.remove('hovered');
         rightPart.classList.remove('hovered');
