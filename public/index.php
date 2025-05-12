@@ -67,7 +67,8 @@ $router->get('/products/{category}', function ($categorySlug) {
 
     if (!$matchedCategory) {
         // Safe 404 redirect before headers are sent
-        header("Location: /404.php");
+        http_response_code(404);
+        include_once __DIR__ . '/404.php';
         exit;
     }
 

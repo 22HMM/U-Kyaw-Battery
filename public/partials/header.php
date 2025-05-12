@@ -17,19 +17,27 @@ $isContact = $currentPath === '/contact-us';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo env('APP_NAME'); ?></title>
+    <title><?= isset($pageTitle) ? "$pageTitle | " . env('APP_NAME') : env('APP_NAME') ?></title>
 
     <!-- Meta tags for SEO -->
     <meta name="description" content="U Kyaw Battery offers a wide range of batteries for homes, businesses, and vehicles, with over 20 years of experience and a focus on customer satisfaction.">
     <meta name="theme-color" content="#363FB3">
+    <meta name="author" content="U Kyaw Battery">
 
     <!-- Favicons for various devices -->
-    <link rel="preload" href="/images/footer-logo.webp" as="image">
     <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
     <link rel="shortcut icon" href="/favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
     <link rel="manifest" href="/favicon/site.webmanifest" />
+
+    <!-- Preload fonts -->
+    <link rel="preload" href="/fonts/IBMPlexSans-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/fonts/Inter_18pt-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/fonts/NotoSansMyanmar-Regular.ttf" as="font" type="font/ttf" crossorigin>
+
+    <!-- Preload images -->
+    <link rel="preload" href="/images/footer-logo.webp" as="image">
 
     <!-- Canonical URL for SEO -->
     <link rel="canonical" href="<?= htmlspecialchars((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8') ?>">

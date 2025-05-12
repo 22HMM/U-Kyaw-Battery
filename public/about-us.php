@@ -1,4 +1,6 @@
-<?php include_once __DIR__ . '/partials/header.php'; ?>
+<?php
+$pageTitle = 'About Us';
+include_once __DIR__ . '/partials/header.php'; ?>
 <!-- Banner -->
 <header class="bg-[#FFFCFF] mt-[60px] lg:mt-[70px] xl:mt-[90px]">
     <div class="relative grid theme-container md:grid-cols-3">
