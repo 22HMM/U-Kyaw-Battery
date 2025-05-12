@@ -24,10 +24,13 @@ DOC.addEventListener('DOMContentLoaded', function () {
      * Bounce animation for hero section call to action.
      */
     const energyBtn = document.querySelector('.energy-btn');
+
+    if (!energyBtn) return;
+
     const leftPart = energyBtn.querySelector('.left-part');
     const rightPart = energyBtn.querySelector('.right-part');
 
-    if (!energyBtn || !leftPart || !rightPart) return;
+    if (!leftPart || !rightPart) return;
 
     energyBtn.addEventListener('mouseleave', () => {
         leftPart.classList.remove('hovered');
