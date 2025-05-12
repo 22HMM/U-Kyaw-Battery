@@ -44,8 +44,6 @@ use Bramus\Router\Router;
 # Initialize the router
 $router = new Router();
 
-$router->setBasePath('/public');
-
 // Pages
 $router->get('/', fn() => include_once __DIR__ . '/home.php');
 $router->get('/products', fn() => include_once __DIR__ . '/products.php');
