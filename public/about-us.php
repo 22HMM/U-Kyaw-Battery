@@ -6,9 +6,9 @@ include_once __DIR__ . '/partials/header.php'; ?>
     <div class="relative grid theme-container md:grid-cols-3">
         <div class="hidden md:block"></div>
         <article class="absolute z-10 flex flex-col w-full max-w-[250px] xs:max-w-[350px] sm:max-w-xl lg:max-w-2xl leading-[120%] gap-6 px-2 transform -translate-y-1/2 md:px-6 left-4 sm:left-6 top-1/2 bg-[#FFFCFF] py-6 sm:py-12 md:py-16 lg:py-24">
-            <p class="text-sm capitalize md:text-base text-secondary"><?= __('about.title'); ?></p>
+            <p class="text-sm capitalize md:text-base lg:text-lg text-secondary"><?= __('about.title'); ?></p>
             <h2 class="banner-title"><?= __('about.subtitle'); ?></h2>
-            <p class="text-sm md:text-base"><?= __('about.description'); ?></p>
+            <p class="text-sm md:text-base lg:text-lg"><?= __('about.description'); ?></p>
         </article>
         <figure class="overflow-hidden md:col-span-2 aspect-w-3 aspect-h-3 xs:aspect-h-2">
             <img
@@ -50,7 +50,7 @@ include_once __DIR__ . '/partials/header.php'; ?>
                 <div class="flex flex-col flex-wrap items-center justify-center w-full max-w-xl mx-auto space-y-6 md:max-w-2xl xs:space-y-0 xs:flex-row xs:space-x-6 md:space-x-20">
                     <?php foreach ($stats as $stat): ?>
                         <p class="space-y-2 text-center">
-                            <span class="text-[#D00416] font-bold text-base md:text-lg lg:text-xl lg:!leading-[140%] block"><?= $stat['value']; ?></span>
+                            <span class="text-[#D00416] font-bold text-base md:text-lg lg:text-2xl lg:!leading-[140%] block"><?= $stat['value']; ?></span>
                             <span class="block text-[12px] md:text-sm lg:text-base"><?= $stat['label']; ?></span>
                         </p>
                     <?php endforeach; ?>

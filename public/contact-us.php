@@ -7,9 +7,9 @@ include_once __DIR__ . '/partials/header.php'; ?>
     <div class="relative grid theme-container md:grid-cols-3">
         <div class="hidden md:block"></div>
         <article class="absolute z-10 flex flex-col w-full max-w-[250px] xs:max-w-[350px] sm:max-w-xl lg:max-w-2xl leading-[120%] gap-6 px-2 transform -translate-y-1/2 md:px-6 left-4 sm:left-6 top-1/2 bg-[#FFFCFF] py-6 sm:py-12 md:py-16 lg:py-24">
-            <p class="text-sm capitalize md:text-base text-secondary"><?= __('contact.title'); ?></p>
+            <p class="text-sm capitalize md:text-base lg:text-lg text-secondary"><?= __('contact.title'); ?></p>
             <h2 class="banner-title"><?= __('contact.subtitle'); ?></h2>
-            <p class="text-sm md:text-base"><?= __('contact.description'); ?></p>
+            <p class="text-sm md:text-base lg:text-lg"><?= __('contact.description'); ?></p>
         </article>
         <figure class="overflow-hidden md:col-span-2 aspect-w-3 aspect-h-3 xs:aspect-h-2">
             <img
@@ -29,12 +29,12 @@ include_once __DIR__ . '/partials/header.php'; ?>
 <section class="py-[60px] md:py-[80px] text-[#020B22]">
     <div class="py-6 md:py-20" style="background-image: url('/images/page-background.webp'); background-size: cover; background-position:center; background-repeat: no-repeat;">
         <div class="theme-container">
-            <article class="w-full max-w-2xl mx-auto">
+            <article class="w-full max-w-3xl mx-auto">
                 <h2 class="mb-8 text-center capitalize heading-2">
                     <?= __('contact.address_title'); ?>
                 </h2>
                 <address class="not-italic">
-                    <ul class="space-y-8 text-sm md:text-base">
+                    <ul class="space-y-8 text-sm md:text-base lg:text-lg">
                         <li>
                             <a href="https://maps.app.goo.gl/FEzJzZub7bHZ3QzE6" target="_blank" rel="noopener" class="inline-flex items-start gap-2 focus:outline-none focus:text-theme focus-visible:ring-2 focus-visible:ring-theme focus-visible:ring-offset-2">
                                 <svg class="w-6 h-6 shrink-0" aria-hidden="true" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
