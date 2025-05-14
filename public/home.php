@@ -2,21 +2,21 @@
 
 <!-- Hero Section -->
 <header class="bg-[#FFFCFF] mt-[60px] lg:mt-[70px] xl:mt-[90px] max-w-[2560px] 2xl:max-w-[1563px] mx-auto">
-    <div class="relative flex flex-col-reverse 2xl:mx-6 gap-y-6">
+    <div class="relative flex flex-col-reverse 2xl:mx-14 gap-y-6">
         <!-- Hero Content -->
-        <article class="hero-content flex flex-col justify-center space-y-6 theme-container relative md:absolute left-0 z-30 h-[calc(100%+4px)] w-full md:w-[60%] bg-[#FFFCFF] md:-m-1 xl:-m-px">
-            <header class="md:max-w-[75%] space-y-2">
-                <div class="flex flex-wrap items-center gap-4 capitalize md:gap-x-8 md:gap-y-4 text-secondary content-text">
+        <article class="hero-content flex flex-col justify-center space-y-6 theme-container relative lg:absolute left-0 z-30 h-[calc(100%+4px)] w-full lg:w-[65%] 2xl:w-[60%] bg-[#FFFCFF] md:-m-1 xl:-m-px">
+            <header class="lg:max-w-[70%] xl:max-w-[75%] space-y-2 px-2">
+                <div class="flex flex-wrap items-center gap-4 capitalize lg:gap-x-8 md:gap-y-4 text-secondary content-text">
                     <strong class="font-medium"><?= __('home.hero.reliable'); ?></strong>၊
                     <strong class="font-medium"><?= __('home.hero.high_quality'); ?></strong>၊
                     <strong class="font-medium"><?= __('home.hero.after_sale'); ?></strong>
                 </div>
                 <h2 class="banner-title lg:!leading-[120%]"><?= __('home.hero.welcome'); ?></h2>
             </header>
-            <div class="md:max-w-[75%] space-y-6">
-                <p class="text-justify content-text text-[#3E3D3D]"><?= __('home.hero.description'); ?></p>
+            <div class="lg:max-w-[70%] xl:max-w-[75%] space-y-6 px-2">
+                <p class="text-justify content-text text-[#3E3D3D] pe-6"><?= __('home.hero.description'); ?></p>
                 <div class="flex flex-wrap items-center gap-4">
-                    <div class="w-full sm:w-3/4 max-w-[300px] md:max-w-full">
+                    <div class="w-full sm:w-[50%] lg:w-[60%] xl:w-[65%] max-w-[300px] md:max-w-full">
                         <a href="/products" class="relative inline-flex w-full overflow-hidden text-white bg-[#FFDB43] btn energy-btn group hover:bg-[#D00416] transition-all ease-in-out">
                             <!-- Left text -->
                             <div class="px-2 py-3 left-part text-end">
@@ -42,12 +42,12 @@
             </div>
         </article>
         <!-- Carousel -->
-        <div id="controls-carousel" class="relative w-full h-[40vh] md:h-[70vh] lg:h-[65vh] xl:h-[70vh] overflow-hidden" data-carousel="slide">
+        <div id="controls-carousel" class="relative w-full h-[40vh] md:h-[70vh] lg:h-[80vh] xl:h-[70vh] overflow-hidden" data-carousel="slide">
             <!-- Carousel wrapper -->
             <div class="relative z-0 w-full h-full overflow-hidden">
                 <!-- Item 1 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                    <img src="/images/carousel-image-1.webp" class="absolute block object-cover w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                <div class="hidden duration-1000 ease-in-out" data-carousel-item="active">
+                    <img src="/images/carousel-image-1.webp" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                         alt="Carousel Image 1"
                         width="1512"
                         height="685"
@@ -56,8 +56,8 @@
                         fetchpriority="high" />
                 </div>
                 <!-- Item 2 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="/images/carousel-image-2.webp" class="absolute block object-cover w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+                    <img src="/images/carousel-image-2.webp" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                         alt="Carousel Image 2"
                         width="1512"
                         height="685"
@@ -95,7 +95,7 @@
 
         <!-- Section Heading -->
         <header class="space-y-6 text-center">
-            <h2 id="products-title" class="flex items-center justify-center space-x-4">
+            <p id="products-title" class="flex items-center justify-center space-x-4">
                 <svg class="w-6 h-6 shrink-0" aria-hidden="true" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_112_2975)">
                         <path d="M2.05176 6.71777C1.66363 6.71777 1.34863 7.03277 1.34863 7.4209V20.1915C1.34863 20.5796 1.66363 20.8946 2.05176 20.8946H12L13.4532 13.8062L12 6.71777H2.05176Z" fill="#FF7C48" />
@@ -121,12 +121,12 @@
                         </clipPath>
                     </defs>
                 </svg>
-                <span class="text-sm capitalize md:text-base text-secondary"><?= __('products.home_title'); ?></span>
-            </h2>
-            <p class="heading-2 lg:!leading-[120%] text-[#020B22]">
-                <?= __('products.subtitle'); ?>
+                <span class="text-sm capitalize md:text-base lg:text-lg text-secondary"><?= __('products.home_title'); ?></span>
             </p>
-            <p class="text-center text-sm md:text-base xl:text-lg text-[#020B22] lg:!leading-[170%]">
+            <h2 class="heading-2 lg:!leading-[120%] text-[#020B22]">
+                <?= __('products.home_subtitle'); ?>
+            </h2>
+            <p class="text-center text-sm md:text-base lg:text-lg xl:text-lg text-[#020B22] lg:!leading-[170%]">
                 <?= __('products.description'); ?>
             </p>
         </header>
@@ -137,7 +137,7 @@
                 $categoryId = 'category-name-' . $index;
                 $categorySlug = slugify($category['name']);
             ?>
-                <a href="/products/<?= $categorySlug; ?>" class="transition-colors duration-300 bg-[#FFFCFF] ease-in-out border border-[#C2C5ED] rounded-[8px] hover:bg-[#C2C5ED] hover:shadow-[0_2px_15px_0_#0000001A] p-4 w-full xs:w-[calc(50%-20px)] lg:w-[calc(33.333%-20px)]" role="listitem" aria-labelledby="<?= $categoryId; ?>">
+                <a href="/products/<?= $categorySlug; ?>" class="transition-colors duration-300 bg-[#FFFCFF] ease-in-out border border-[#C2C5ED] rounded-[8px] hover:bg-[#F2F3FF] hover:shadow-[0_2px_15px_0_#0000001A] p-4 w-full xs:w-[calc(50%-20px)] lg:w-[calc(33.333%-20px)]" role="listitem" aria-labelledby="<?= $categoryId; ?>">
                     <article class="space-y-6" itemscope itemtype="https://schema.org/CollectionPage">
                         <header>
                             <img
@@ -165,9 +165,9 @@
 
 <!-- About Section -->
 <section class="relative py-[60px] md:py-[80px] max-w-[2560px] 2xl:max-w-[1563px] mx-auto" aria-labelledby="about-title">
-    <div class="grid gap-12 md:grid-cols-2 md:gap-8 lg:gap-16 2xl:mx-6">
+    <div class="grid gap-12 md:grid-cols-2 md:gap-8 lg:gap-16 2xl:mx-14">
         <!-- Image with Caption -->
-        <figure class="overflow-hidden aspect-w-3 aspect-h-2">
+        <figure class="w-full overflow-hidden aspect-w-6 aspect-h-4">
             <img
                 class="object-cover object-center w-full h-full select-none"
                 src="/images/home-about-us-image.webp"
@@ -180,9 +180,9 @@
         </figure>
 
         <!-- About Content -->
-        <article class="space-y-6 md:space-y-8 lg:space-y-12 theme-container md:!ps-0">
+        <article class="theme-container md:!ps-0 flex flex-col justify-between space-y-6 md:space-y-8 lg:space-y-8 2xl:space-y-10 mb-2">
             <header class="space-y-6">
-                <h2 id="about-title" class="flex items-center justify-start space-x-4">
+                <p id="about-title" class="flex items-center justify-start space-x-4">
                     <svg class="w-6 h-6 shrink-0" aria-hidden="true" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_112_2975)">
                             <path d="M2.05176 6.71777C1.66363 6.71777 1.34863 7.03277 1.34863 7.4209V20.1915C1.34863 20.5796 1.66363 20.8946 2.05176 20.8946H12L13.4532 13.8062L12 6.71777H2.05176Z" fill="#FF7C48" />
@@ -209,12 +209,17 @@
                         </defs>
                     </svg>
                     <span class="text-sm capitalize md:text-base text-secondary"><?= __('about.title'); ?></span>
-                </h2>
-                <p class="heading-2 lg:!leading-[120%] text-[#020B22]">
-                    <?= __('about.subtitle'); ?>
                 </p>
+                <div>
+                    <h2 class="heading-2 lg:!leading-[120%] text-[#020B22]">
+                        <p><?= __('about.about_title_1'); ?></p>
+                    </h2>
+                    <h2 class="heading-2 lg:!leading-[120%] text-[#020B22]">
+                        <p><?= __('about.about_title_2'); ?></p>
+                    </h2>
+                </div>
             </header>
-            <p class="text-justify content-text"><?= __('home.testimonial.description'); ?></p>
+            <p class="text-justify content-text"><?= __('about.about_description'); ?></p>
             <?php
             $stats = [
                 ['value' => __('about.years'), 'label' => __('about.experience')],
@@ -222,10 +227,10 @@
                 ['value' => __('about.authorized'), 'label' => __('about.distributor')],
             ];
             ?>
-            <ul class="flex flex-col flex-wrap items-center justify-start gap-y-12 xs:gap-y-6 xs:flex-row xs:gap-x-12 lg:gap-x-20" aria-label="Company Achievements">
+            <ul class="flex flex-col flex-wrap items-center justify-start gap-y-12 xs:gap-y-6 xs:flex-row xs:gap-x-12 lg:gap-x-24" aria-label="Company Achievements">
                 <?php foreach ($stats as $stat): ?>
                     <li class="space-y-2 text-center">
-                        <strong class="text-[#D00416] block font-bold text-base md:text-lg lg:text-xl lg:!leading-[140%]"><?= $stat['value']; ?></strong>
+                        <strong class="text-[#D00416] block font-bold text-base md:text-lg lg:text-2xl lg:!leading-[140%]"><?= $stat['value']; ?></strong>
                         <span class="block text-[12px] md:text-sm lg:text-base"><?= $stat['label']; ?></span>
                     </li>
                 <?php endforeach; ?>
@@ -247,7 +252,7 @@
 
         <!-- Section Heading -->
         <header class="space-y-6 text-center">
-            <h2 id="services-title" class="flex items-center justify-center space-x-4">
+            <p id="services-title" class="flex items-center justify-center space-x-4">
                 <svg class="w-6 h-6 shrink-0" aria-hidden="true" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_112_2975)">
                         <path d="M2.05176 6.71777C1.66363 6.71777 1.34863 7.03277 1.34863 7.4209V20.1915C1.34863 20.5796 1.66363 20.8946 2.05176 20.8946H12L13.4532 13.8062L12 6.71777H2.05176Z" fill="#FF7C48" />
@@ -274,15 +279,15 @@
                     </defs>
                 </svg>
                 <span class="text-sm capitalize md:text-base text-secondary"><?= __('services.home_title'); ?></span>
-            </h2>
-            <p class="heading-2 lg:!leading-[120%] text-[#020B22]">
-                <?= __('services.subtitle'); ?>
             </p>
+            <h2 class="heading-2 lg:!leading-[120%] text-[#020B22]">
+                <?= __('services.subtitle'); ?>
+            </h2>
         </header>
 
         <!-- Services -->
         <?php $services = getServices(); ?>
-        <div class="grid gap-6 xs:grid-cols-2 md:grid-cols-3" role="list">
+        <div class="grid gap-6 md:gap-8 xs:grid-cols-2 md:grid-cols-3" role="list">
             <?php foreach ($services as $index => $service):
                 $serviceId = 'service-name-' . $index;
             ?>
@@ -379,7 +384,7 @@
 
 <!-- Testimonial Section -->
 <section class="relative py-[60px] md:py-[80px]" aria-labelledby="testimonial-title">
-    <div class="grid items-center gap-10 md:gap-20 lg:gap-28 theme-container md:grid-cols-2">
+    <div class="grid items-center gap-10 md:gap-20 lg:gap-x-44 theme-container md:grid-cols-2">
 
         <!-- Testimonial Content -->
         <article class="space-y-6 md:space-y-8">
@@ -391,7 +396,7 @@
                     “<?= __('home.testimonial.title'); ?>”
                 </h3>
             </header>
-            <blockquote class="text-sm md:text-base text-[#3E3D3D] text-justify">
+            <blockquote class="text-sm md:text-base lg:text-lg text-[#3E3D3D] text-justify">
                 <p><?= __('home.testimonial.description'); ?></p>
                 <footer class="mt-4 text-xs text-gray-500">
                     <!-- Set sr only to hide on UI -->

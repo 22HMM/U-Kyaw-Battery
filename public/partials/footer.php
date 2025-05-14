@@ -9,7 +9,7 @@
                 height="50"
                 title="Footer Logo"
                 loading="eager" />
-            <h2 class="footer-title">ဦးကျော် ဘတ္ထရီ - Kyaw Battery Sales & Services</h2>
+            <h2 class="font-semibold footer-title">ဦးကျော် ဘတ္ထရီ - Kyaw Battery Sales & Services</h2>
         </header>
 
         <div class="grid gap-6 md:grid-cols-3 md:gap-12" role="contentinfo" aria-label="Footer Information">

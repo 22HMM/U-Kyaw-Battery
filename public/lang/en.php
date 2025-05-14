@@ -35,7 +35,7 @@ return [
             'description'   => 'Working with U Kyaw Battery has been an exceptional experience. Their commitment to quality, reliability, and innovation in the battery industry sets them apart. Their team is dedicated to delivering top-notch solutions, ensuring customer satisfaction at every step. We highly recommend U Kyaw Battery for anyone looking for durable and high-performance battery solutions.',
         ],
         'buy_battery' => [
-            'title'         => 'Buy Battery Online',
+            'title'         => 'Buy Batteries Online',
             'description'   => 'Browse our wide selection of high-quality batteries for all you needs.',
             'buy_now'       => 'Buy Now',
             'read_details'  => 'Read Details',
@@ -44,6 +44,7 @@ return [
     'products' => [
         'title' => 'Products',
         'subtitle' => 'Top International Brands',
+        'home_subtitle' => 'Top International Battery Brands We Offer',
         'description' => 'We offer batteries from top international brands which are sourced from trusted manufacturers to ensure high quality and performance.',
         'home_title'  => 'Our Products',
         'categories' => [

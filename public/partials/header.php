@@ -32,7 +32,7 @@ $isContact = $currentPath === '/contact-us';
     <link rel="manifest" href="/favicon/site.webmanifest" />
 
     <!-- Preload fonts -->
-    <link rel="preload" href="/fonts/IBMPlexSans-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/fonts/IBMPlexSans-Bold.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="/fonts/Inter_18pt-Regular.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="/fonts/NotoSansMyanmar-Regular.ttf" as="font" type="font/ttf" crossorigin>
 
