@@ -1270,20 +1270,6 @@ input:checked + .toggle-bg {
   bottom: 0;
   left: 0;
 }
-.aspect-w-1 {
-  position: relative;
-  padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
-  --tw-aspect-w: 1;
-}
-.aspect-w-1 > * {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
 .selectedCell {
   background-color: var(--color-gray-50);
 }
@@ -1981,8 +1967,8 @@ input:checked + .toggle-bg {
   width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 600;
@@ -2452,9 +2438,6 @@ input:checked + .toggle-bg {
 .h-screen {
   height: 100vh;
 }
-.max-h-\[400px\] {
-  max-height: 400px;
-}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -2523,9 +2506,6 @@ input:checked + .toggle-bg {
 }
 .max-w-xl {
   max-width: 36rem;
-}
-.max-w-\[400px\] {
-  max-width: 400px;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -2846,10 +2826,6 @@ input:checked + .toggle-bg {
   --tw-border-opacity: 1;
   border-top-color: rgb(2 11 34 / var(--tw-border-opacity, 1));
   border-bottom-color: rgb(2 11 34 / var(--tw-border-opacity, 1));
-}
-.border-y-\[\#\#20B22\] {
-  border-top-color: ##20B22;
-  border-bottom-color: ##20B22;
 }
 .border-b-transparent {
   border-bottom-color: transparent;
@@ -3899,10 +3875,6 @@ h6 {
     height: 70vh;
   }
 
-  .md\:h-\[85vh\] {
-    height: 85vh;
-  }
-
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -3935,10 +3907,6 @@ h6 {
     max-width: 100%;
   }
 
-  .md\:max-w-\[65\%\] {
-    max-width: 65%;
-  }
-
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -3969,11 +3937,6 @@ h6 {
 
   .md\:gap-8 {
     gap: 2rem;
-  }
-
-  .md\:gap-x-8 {
-    -moz-column-gap: 2rem;
-         column-gap: 2rem;
   }
 
   .md\:gap-y-12 {
@@ -4119,6 +4082,14 @@ h6 {
     grid-column: span 4 / span 4;
   }
 
+  .lg\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .lg\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+
   .lg\:ms-5 {
     margin-inline-start: 1.25rem;
   }
@@ -4135,20 +4106,8 @@ h6 {
     height: 60px;
   }
 
-  .lg\:h-\[65vh\] {
-    height: 65vh;
-  }
-
-  .lg\:h-\[75vh\] {
-    height: 75vh;
-  }
-
   .lg\:h-\[80vh\] {
     height: 80vh;
-  }
-
-  .lg\:max-h-\[400px\] {
-    max-height: 400px;
   }
 
   .lg\:w-28 {
@@ -4175,24 +4134,16 @@ h6 {
     max-width: 42rem;
   }
 
-  .lg\:max-w-\[65\%\] {
-    max-width: 65%;
-  }
-
-  .lg\:max-w-\[75\%\] {
-    max-width: 75%;
-  }
-
   .lg\:max-w-\[70\%\] {
     max-width: 70%;
   }
 
-  .lg\:max-w-\[400px\] {
-    max-width: 400px;
-  }
-
   .lg\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
   .lg\:flex-col {
@@ -4201,10 +4152,6 @@ h6 {
 
   .lg\:gap-16 {
     gap: 4rem;
-  }
-
-  .lg\:gap-28 {
-    gap: 7rem;
   }
 
   .lg\:gap-8 {
@@ -4216,19 +4163,14 @@ h6 {
          column-gap: 6rem;
   }
 
-  .lg\:gap-x-8 {
-    -moz-column-gap: 2rem;
-         column-gap: 2rem;
-  }
-
-  .lg\:gap-x-36 {
-    -moz-column-gap: 9rem;
-         column-gap: 9rem;
-  }
-
   .lg\:gap-x-44 {
     -moz-column-gap: 11rem;
          column-gap: 11rem;
+  }
+
+  .lg\:gap-x-8 {
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
   }
 
   .lg\:space-x-16 > :not([hidden]) ~ :not([hidden]) {
@@ -4253,11 +4195,6 @@ h6 {
     --tw-space-y-reverse: 0;
     margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(2rem * var(--tw-space-y-reverse));
-  }
-
-  .lg\:object-contain {
-    -o-object-fit: contain;
-       object-fit: contain;
   }
 
   .lg\:p-8 {
@@ -4427,19 +4364,14 @@ h6 {
     right: 1.5rem;
   }
 
-  .\32xl\:mx-6 {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-  }
-
-  .\32xl\:mx-12 {
-    margin-left: 3rem;
-    margin-right: 3rem;
-  }
-
   .\32xl\:mx-14 {
     margin-left: 3.5rem;
     margin-right: 3.5rem;
+  }
+
+  .\32xl\:mx-6 {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
   }
 
   .\32xl\:w-\[60\%\] {

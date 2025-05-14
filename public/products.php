@@ -6,9 +6,9 @@ include_once __DIR__ . '/partials/header.php'; ?>
     <div class="relative grid theme-container md:grid-cols-3">
         <div class="hidden md:block"></div>
         <article class="absolute z-10 flex flex-col w-full max-w-[250px] xs:max-w-[350px] sm:max-w-xl lg:max-w-2xl leading-[120%] gap-6 px-2 transform -translate-y-1/2 md:px-6 left-4 sm:left-6 top-1/2 bg-[#FFFCFF] py-6 sm:py-12 md:py-16 lg:py-24">
-            <p id="products-heading" class="text-sm capitalize md:text-base text-secondary"><?= __('products.title'); ?></p>
+            <p id="products-heading" class="text-sm capitalize md:text-base lg:text-lg text-secondary"><?= __('products.title'); ?></p>
             <h2 class="banner-title"><?= __('products.subtitle'); ?></h2>
-            <p class="text-sm md:text-base"><?= __('products.description'); ?></p>
+            <p class="text-sm md:text-base lg:text-lg"><?= __('products.description'); ?></p>
         </article>
         <figure class="overflow-hidden md:col-span-2 aspect-w-3 aspect-h-3 xs:aspect-h-2">
             <img
@@ -38,7 +38,7 @@ $currentCategory = getCategoryBySlug($currentCategorySlug);
 $currentProducts = $currentCategory ? getProductsByCategoryId($currentCategory['id']) : [];
 ?>
 <section class="py-[60px] md:py-[80px]" aria-labelledby="products-heading">
-    <div class="grid gap-12 py-2 md:gap-4 lg:gap-8 theme-container lg:grid-cols-5">
+    <div class="grid gap-12 py-2 md:gap-4 theme-container lg:grid-cols-5">
         <aside>
             <ul class="flex flex-row flex-wrap lg:flex-col border border-[#2D349566]">
                 <?php foreach ($categories as $category): ?>

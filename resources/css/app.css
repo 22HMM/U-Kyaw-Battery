@@ -134,7 +134,7 @@
   }
 
   .tab {
-    @apply inline-block w-full px-4 py-4 text-sm font-semibold transition-colors duration-500 ease-out xs:px-8 lg:text-base;
+    @apply inline-block w-full px-4 py-3 text-sm font-semibold transition-colors duration-500 ease-out xs:px-8 lg:text-base;
     @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-theme focus-visible:ring-offset-2;
   }
 
