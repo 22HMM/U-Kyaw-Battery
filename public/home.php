@@ -137,7 +137,7 @@
                 $categoryId = 'category-name-' . $index;
                 $categorySlug = slugify($category['name']);
             ?>
-                <a href="/products/<?= $categorySlug; ?>" class="transition-colors duration-300 bg-[#FFFCFF] ease-in-out border border-[#C2C5ED] rounded-[8px] hover:bg-[#F2F3FF] hover:shadow-[0_2px_15px_0_#0000001A] p-4 w-full xs:w-[calc(50%-20px)] lg:w-[calc(33.333%-20px)]" role="listitem" aria-labelledby="<?= $categoryId; ?>">
+                <a href="/products/<?= $categorySlug; ?>" class="transition-colors duration-300 bg-[#FFFCFF] ease-in-out border border-[#C2C5ED] hover:bg-[#F2F3FF] hover:shadow-[0_2px_15px_0_#0000001A] p-4 w-full xs:w-[calc(50%-20px)] lg:w-[calc(33.333%-20px)]" role="listitem" aria-labelledby="<?= $categoryId; ?>">
                     <article class="space-y-6" itemscope itemtype="https://schema.org/CollectionPage">
                         <header>
                             <img
@@ -406,7 +406,7 @@
         </article>
 
         <!-- Image with Caption -->
-        <figure class="relative overflow-hidden rounded-[20px]" role="img" aria-label="Testimonial letter from Scope Battery">
+        <figure class="relative overflow-hidden" role="img" aria-label="Testimonial letter from Scope Battery">
             <img
                 class="object-cover object-center w-full h-full select-none"
                 src="/images/testimonial-bg.webp"
