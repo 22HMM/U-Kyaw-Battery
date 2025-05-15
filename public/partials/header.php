@@ -84,7 +84,7 @@ $isContact = $currentPath === '/contact-us';
 
 
             <!-- Nav links for large screens -->
-            <ul class="items-center hidden space-x-3 text-sm md:text-[12px] lg:text-sm font-normal capitalize transition-all duration-300 ease-in-out md:flex lg:space-x-5">
+            <ul class="items-center hidden space-x-3 text-sm md:text-[12px] lg:text-base font-normal capitalize transition-all duration-300 ease-in-out md:flex lg:space-x-5">
                 <li>
                     <a href="/" class="nav-link lg:px-4 xl:px-6 px-2 py-[18px] lg:py-[22px] xl:py-8 <?= $isHome ? 'active' : ''; ?>"
                         <?= $isHome ? 'aria-current="page"' : '' ?>

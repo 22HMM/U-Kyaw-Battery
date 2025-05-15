@@ -121,12 +121,12 @@
                         </clipPath>
                     </defs>
                 </svg>
-                <span class="text-sm capitalize md:text-base lg:text-lg text-secondary"><?= __('products.home_title'); ?></span>
+                <span class="text-sm capitalize md:text-base text-secondary"><?= __('products.home_title'); ?></span>
             </p>
             <h2 class="heading-2 lg:!leading-[120%] text-[#020B22]">
                 <?= __('products.home_subtitle'); ?>
             </h2>
-            <p class="text-center text-sm md:text-base lg:text-lg xl:text-lg text-[#020B22] lg:!leading-[170%]">
+            <p class="text-center text-sm md:text-base text-[#020B22] lg:!leading-[170%]">
                 <?= __('products.description'); ?>
             </p>
         </header>
@@ -396,7 +396,7 @@
                     “<?= __('home.testimonial.title'); ?>”
                 </h3>
             </header>
-            <blockquote class="text-sm md:text-base lg:text-lg text-[#3E3D3D] text-justify">
+            <blockquote class="text-sm md:text-base text-[#3E3D3D] text-justify">
                 <p><?= __('home.testimonial.description'); ?></p>
                 <footer class="mt-4 text-xs text-gray-500">
                     <!-- Set sr only to hide on UI -->
