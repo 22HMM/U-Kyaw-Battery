@@ -37,6 +37,15 @@ $isContact = $currentPath === '/contact-us';
     <link rel="preload" href="/fonts/NotoSansMyanmar-Regular.ttf" as="font" type="font/ttf" crossorigin>
 
     <!-- Preload images -->
+    <link rel="preload" href="/images/main-logo.webp" as="image">
+    <link rel="preload" href="/images/US.webp" as="image">
+    <link rel="preload" href="/images/MM.webp" as="image">
+    <link rel="preload" href="/images/products-banner.webp" as="image">
+    <link rel="preload" href="/images/services-banner.webp" as="image">
+    <link rel="preload" href="/images/about-us-banner.webp" as="image">
+    <link rel="preload" href="/images/contact-us-banner.webp" as="image">
+    <link rel="preload" href="/images/carousel-image-1.webp" as="image">
+    <link rel="preload" href="/images/carousel-image-2.webp" as="image">
     <link rel="preload" href="/images/footer-logo.webp" as="image">
 
     <!-- Canonical URL for SEO -->
