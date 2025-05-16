@@ -61,7 +61,7 @@
                     <ul class="space-y-4 ">
                         <li>
                             <a href="https://maps.app.goo.gl/FEzJzZub7bHZ3QzE6" target="_blank" rel="noopener" class="focus:outline-none focus:text-theme focus-visible:ring-2 focus-visible:ring-theme focus-visible:ring-offset-2">
-                                No. (320/27), Ground Floor, Upper Baho Road, Mayangone Township, Yangon.
+                                No.(376) Upper Baho Road Mayangone Township, Yangon.
                             </a>
                         </li>
                         <li class="flex items-center gap-2">
